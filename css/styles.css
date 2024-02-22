@@ -1,0 +1,686 @@
+/* GENERAL STYLING  */
+
+/* basic reset - helps organize everything */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html, body {
+ height: 100%
+}
+h1, h2, h3, h4, h5, h6, p {
+ margin-bottom: 16px
+}
+
+/* general hover effects */
+/* nav hover  */
+.links a:hover{
+    cursor: pointer;
+    color:gray;
+    text-decoration: underline;
+}
+
+/* footer nav hover */
+li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* general fonts */
+/* home + blowup */
+@font-face {
+    font-family: UrbanistBold;
+    src: url(./fonts/Urbanist/static/Urbanist-Bold.ttf);
+  }
+
+  /* nav logo */
+  @font-face{
+    font-family: CursiveLogo;
+    src: url(./fonts/Cedarville_Cursive/CedarvilleCursive-Regular.ttf);
+  }
+
+  /*sub txt */
+  @font-face{
+    font-family: UrbanRegular;
+    src: url(./fonts/Urbanist/static/Urbanist-Regular.ttf);
+  }
+
+  /* sub headers */
+  @font-face{
+    font-family: UrbanMedium;
+    src: url(./fonts/Urbanist/static/Urbanist-Medium.ttf);
+  }
+
+/* all other text */
+@font-face{
+    font-family: SoraRegular;
+    src: url(./fonts/Sora/static/Sora-Regular.ttf);
+  }
+
+  /* BEGIN NAV CONTENT */
+
+/* bigger nav */
+.det-nav {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+/*  navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90px;
+    margin-top: 10px;
+}
+
+/* logp */
+.logo{
+    margin-right: 900px;
+    font-size: 40px;
+    font-family: CursiveLogo;
+}
+
+/* no text dec on logo either */
+.logo a {
+    text-decoration: none;
+    color: #000
+
+}
+
+/* links */
+.links a { 
+    font-size: 18px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #000;
+    font-family: SoraRegular;
+}
+
+/* all sections to be 100% of page */
+section {
+    height: 100%; 
+}
+
+/* BEGIN HOME CONTENT */
+/* home section */
+.zdc-home {
+    font-size: 50px;
+    text-align: center;
+    margin: 200px auto 200px;
+}
+/* h1 intro */
+/* will fade in */
+.home-fade {
+    overflow: hidden; 
+    margin-bottom: 100px;
+    letter-spacing: 10px;
+    font-family: UrbanistBold;
+    color: #181818;
+
+  }
+  
+  /* actual animation */
+  .home-fade h1 {
+    display: inline-block; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: fadeIn 2s ease-in forwards; 
+  }
+  
+  /* keyframes */
+  @keyframes fadeIn {
+    from { opacity: 0; } /* Start with opacity set to 0 */
+    to { opacity: 1; } /* End with opacity set to 1 */
+  }
+  
+/* home parent portion */
+.home-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 200px;
+}
+
+/* home image */
+.home-img {
+    width: 500px;
+    height: 900px;
+    margin-top: -200px;
+    background-image: url(../images/zdc-home-.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* text parent */
+.home-txt-parent{
+    margin-left: 100px;
+}
+
+/* home text small desc */
+.home-txt-sub{
+text-align: center;
+/* margin-top: -210px; */
+margin-left: -230px;
+margin-bottom: 180px;
+font-size: 40px;
+width: 100%;
+font-family: UrbanRegular;
+
+}
+
+/* home small about */
+.home-txt-abt {
+font-size: 20px;
+width: 600px;
+margin-left: -155px;
+margin-bottom: 100px;
+text-align: center;
+font-family: SoraRegular;
+ }
+
+/* home more abt me */
+.home-txt-more {
+font-size: 18px;
+text-decoration: underline;
+font-family: SoraRegular;
+
+}
+
+/* skills portion */
+.home-skills {
+    font-size: 18px;
+    margin-bottom: 50px;
+    font-family: UrbanRegular;
+}
+
+/* skills "btns" */
+.home-skills-btn {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+    margin-top: 10px;
+    margin-left: 10px;
+    will-change: transform;
+  }
+  
+  /* hover effect for btn */
+  .home-skills-btn:hover {
+    color: #fff;
+    background-color: #181818;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+ 
+  /* BEGIN WORK */
+  /* work section */
+  .zdc-work {
+    font-size: 40px;
+    margin-left: 200px;
+    margin-top: 300px;
+    font-family: UrbanMedium;
+  }
+
+  /* work parent */
+  .work-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1000px;
+    margin-top: 100px;
+    margin-bottom: 350px;
+
+  }
+
+  /* work text parent  */
+  .work-txt-parent{
+    margin-top: 150px;
+  }
+
+  /* work proj title */
+  .work-txt-title{
+    font-size: 40px;
+    width: 100%;
+   text-align: left;
+    margin-bottom: 30px;
+  }
+
+  /* work proj descrip */
+  .work-txt-descrip{
+    font-size: 20px;
+    width: 500px;
+    margin-bottom: 30px;
+  }
+
+  /* tags */
+  .work-tags{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 100px;
+  }
+
+/* basic margining... */
+.work-tags p {
+    margin-right: 30px;
+}
+
+/* hover effect for tags */
+.work-tags p:hover {
+    color:gray
+}
+
+  /* icons */
+  .work-icons {
+    margin-left: 170px;
+    display: flex;
+  }
+
+  /* hover effect */
+  .work-icons i:hover{
+    color: gray;
+    cursor: pointer;
+  }
+  
+  /* margins for icons */
+  .icon{
+    margin-top: 10px;
+    margin-right: 50px;
+  }
+
+  /* work image parent */
+  .work-img-parent{
+    width: 400px;
+    height: 200px;
+  }
+
+/* setup for all work images */
+.work-set {
+    margin-left: 200px;
+    width: 600px;
+    height: 430px;
+    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+
+}
+/* image 1 - booknook */
+.work-img1 {
+    background-image: url(../images/zdc-booknook.png);
+}
+/* image 2 - eventsy */
+.work-img2{
+    background-image: url(../images/zdc-eventsy.png);
+}
+
+/* image 3 - web dev */
+  .work-img3{
+    background-image: url(../images/zdc-webdev.png);
+  }
+
+
+  /* smaller proj parent */
+  .work-small-parent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 150px;
+    margin-bottom: 200px;
+  }
+
+  /* project parent
+  .work-small-proj{
+
+  } */
+
+  /* actual proj */
+  .work-proj {
+    padding: 10px;
+  }
+
+  /* title for project */
+  .work-small-title{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* small desc for proj */
+  .work-small-txt-des{
+    text-align: center;
+    font-size: 18px;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+
+  /* actual project */
+  .work-proj{
+    width: 450px;
+    height: 350px;
+    background-color: #f6f5f5;
+    border-radius: 20px;
+    margin-right: 50px;
+    border: 1px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  }
+
+/* BEGIN ABOUT */
+/* about section */
+.zdc-about {
+    font-size: 40px;
+    margin: 200px auto 200px;
+}
+
+/* about intro */
+.about-intro {
+    color: #fff;
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-bottom: 150px;
+    font-family: UrbanMedium;
+}
+
+/* about parent */
+.about-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* about text parent */
+.about-txt-parent{
+    margin-top: -100px;
+}
+
+/* about text desc  */
+.about-txt-par{
+    color: #fff;
+    font-size: 20px;
+    width: 600px;
+    line-height: 2;
+    font-family: SoraRegular;
+
+}
+
+/* about image parent */
+.about-img-parent {
+    width: 350px;
+    height: 900px;
+   
+}
+
+/* about image here */
+.about-img{
+    margin-top: -50px;
+    width: 450px;
+    height: 900px;
+    margin-right: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/zdc-face-abt.jpg);
+}
+
+/* BEGIN CONTACT */
+/* contact section */
+.zdc-contact{
+    font-size: 40px;
+    margin: 200px auto 200px;
+}
+
+/* contact intro */
+.contact-intro{
+    color: #000;
+    margin-top: 150px;
+    margin-left: 350px;
+    font-family: UrbanMedium;
+}
+
+/* contact text parent */
+.contact-txt-form-parent{
+    margin-top: -100px;
+}
+
+/* contact desc */
+.contact-txt-desc{
+    color: #000;
+    font-size: 20px;
+    width: 600px;
+    line-height: 1.7;
+    text-align: center;
+    font-family: SoraRegular;
+
+}
+
+/* contact form */
+
+/* overall form */
+form {
+   margin-top: 70px;
+   margin-left: 150px;
+}
+
+/* labels */
+label {
+    font-size: 18px;
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+    font-family: UrbanRegular;
+
+}
+
+/* inputs */
+input {
+    font-size: 17px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 50px;
+    padding-left: 10px;
+    color: #000;
+    border: none; 
+    border-bottom: 2px solid #000; 
+    background-color: transparent;
+    font-family: UrbanRegular;
+
+}
+
+/* styling when in focus */
+input:focus {
+    border-bottom-color: #000; 
+    outline: none; 
+}
+
+/* textarea */
+textarea {
+    margin-bottom: 20px;
+    width: 400px;
+    height: 90px;
+    padding-top: 10px;
+    border: 2px solid #000;
+    background-color: #f6f5f5;
+    color: #000;
+    padding-left: 10px;
+    font-family: UrbanRegular;
+}
+
+/* button */
+.form-btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 45px;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 300px;
+  will-change: transform;
+  font-family: UrbanRegular;
+}
+
+/* hover effect for btn */
+.form-btn:hover {
+  color: #fff;
+  background-color: #181818;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+/* when active */
+.form-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* contact image parent */
+.contact-img-parent{
+    width: 350px;
+    height: 900px;
+}
+
+/* contact image */
+.contact-img{
+    margin-top: -50px;
+    width: 450px;
+    height: 900px;
+    margin-right: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/zdc-contact-map.png);
+}
+
+/* BEGIN FOOTER */
+/* actual footer section */
+.zdc-footer {
+    background-color: #181818;
+
+}
+
+/* footer parent */
+.zdc-footer-parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* footer logo */
+.footer-logo{
+    width: 800px;
+    height: 500px;
+}
+
+/* image for logo */
+.footer-logo img {
+    margin-left: -200px;
+    width: 800px;
+    height: 500px;
+    margin-top: 100px;
+}
+
+/* blowup text w name */
+.footer-blowup{
+    font-size: 100px;
+    color: #fff;
+    width: 1000px;
+    margin: -50px auto 0 400px;
+    letter-spacing: 16px;
+    font-family: UrbanistBold;
+}
+
+/* smaller dis flex for copy + rights */
+.copy-rights {
+    margin-top: 110px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-family: UrbanRegular;
+}
+
+/* basic styling for both */
+.foot-words {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 550px;
+}
+
+/* same color for both foot elements */
+.footer-socials{
+    color: #fff;
+    /* start w basic margin */
+    margin-top: 70px ;
+    font-family: SoraRegular;
+
+}
+
+/* footer sitemap spef. margin */
+.footer-sitemap{
+    color: #fff;
+    margin-top: 100px;
+    font-family: SoraRegular;
+
+ }
+/* list in footer */
+.footer-list{
+    margin-top: 20px;
+    list-style-type: none;
+    font-family: SoraRegular;
+}
+
+/* links for list */
+.footer-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* seperate margin for indv list */
+li {
+    margin-bottom: 20px;
+}
