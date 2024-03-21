@@ -207,11 +207,11 @@ font-family: SoraRegular;
 /* skills "btns" */
 .home-skills-btn {
     appearance: none;
-    background-color: transparent;
+    background-color: white;
     border: 2px solid #1A1A1A;
     border-radius: 15px;
     box-sizing: border-box;
-    color: #3B3B3B;
+    color: #000;
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
@@ -430,7 +430,7 @@ font-family: SoraRegular;
 .about-txt-par{
     color: #fff;
     font-size: 20px;
-    width: 600px;
+    width: 750px;
     line-height: 2;
     font-family: SoraRegular;
 
