@@ -168,21 +168,24 @@ section {
 .home-txt-sub{
 text-align: center;
 /* margin-top: -210px; */
-margin-left: -230px;
-margin-bottom: 180px;
+margin-left: -100px;
+margin-bottom: 150px;
+/* margin-top: -480px; */
 font-size: 40px;
 width: 100%;
 font-family: UrbanRegular;
 
 }
 
+
 /* home small about */
 .home-txt-abt {
 font-size: 20px;
-width: 600px;
-margin-left: -155px;
+width: 700px;
+margin-top: 250px;
+margin-right: 200px;
 margin-bottom: 100px;
-text-align: center;
+text-align: left;
 font-family: SoraRegular;
  }
 
