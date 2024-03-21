@@ -112,6 +112,7 @@ section {
     font-size: 50px;
     text-align: center;
     margin: 200px auto 200px;
+
 }
 /* h1 intro */
 /* will fade in */
@@ -152,7 +153,7 @@ section {
     width: 500px;
     height: 900px;
     margin-top: -200px;
-    background-image: url(../images/zdc-home-.JPG);
+    background-image: url(../images/zdc-home-n.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -448,7 +449,7 @@ font-family: SoraRegular;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../images/zdc-face-abt.jpg);
+    background-image: url(../images/zdc-about-pp.jpg);
 }
 
 /* BEGIN CONTACT */
