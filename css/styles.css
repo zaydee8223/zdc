@@ -244,8 +244,7 @@ font-family: SoraRegular;
   /* work section */
   .zdc-work {
     font-size: 40px;
-    margin-left: 200px;
-    margin-top: 300px;
+    margin-left: 160px;
     font-family: UrbanMedium;
   }
 
@@ -255,8 +254,7 @@ font-family: SoraRegular;
     align-items: center;
     justify-content: space-evenly;
     width: 1000px;
-    margin-top: 100px;
-    margin-bottom: 350px;
+    margin-bottom: 100px;
 
   }
 
@@ -355,6 +353,7 @@ font-family: SoraRegular;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 200px;
     margin-right: 150px;
     margin-bottom: 200px;
   }
@@ -390,7 +389,7 @@ font-family: SoraRegular;
   /* actual project */
   .work-proj{
     width: 450px;
-    height: 350px;
+    height: 380px;
     background-color: #f6f5f5;
     border-radius: 20px;
     margin-right: 50px;
