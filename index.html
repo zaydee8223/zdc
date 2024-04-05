@@ -3,86 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zdc - home</title>
-     <!-- custom icon -->
-     <link rel="icon" href="/images/zdc-logo-blkw.png" type="image/x-icon">
-    <!-- link to css file -->
+    <title>zdc - portfolio</title>
+    <!-- link to css -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- icons for styling -->
+
+     <!-- logo custom icon -->
+     <link rel="icon" href="/images/zdc-logo-blkw.png" type="image/x-icon">
+
+      <!-- link to different icons - styling -->
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <!-- more icons -->
+
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/link.css' rel='stylesheet'>
-    <!-- another icon -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- link to js -->
+    <script src="script.js"></script>
+
 </head>
-<body style="background-color: #f6f5f5;">
-    <!-- whole div - pos fixed -->
-    <div class="det-nav">
+<body style="background-color: #e8e0db;">
+    <!-- begin navigation -->
+     <!-- whole nav - pos fixed -->
         <!-- create nav bar -->
         <nav>
-            <!-- logo - add cursive font -->
-            <div class="logo"><a href="index.html">zdc</a></div>
+            <!-- logo - just zdc -->
+            <div class="logo"><a href="#home">zdc</a></div>
             <!-- all links -->
             <div class="links">
-                <a href="#work">WORK</a>
-                <a href="about.html">ABOUT</a>
-                <a href="zdc-resume.pdf" target="_blank">RESUME</a>
-                <a href="contact.html">CONTACT</a>
+                <a href="#work">projects</a>
+                <a href="#about">about</a>
+                <a href="zdc-resume.pdf" target="_blank">resume</a>
+                <a href="#contact">contact</a>
             </div>
         </nav>
-        <!-- decorative line -->
-        <hr>
-    </div>
+          <!-- decor line -->
+          <div class="line"></div>
 
-    <!-- begin section for home -->
-    <section class="zdc-home">
-        <div class="home-fade"><h1>ZEALOUS. DEDICATED. CATALYTIC.</h1></div>
-        <!-- begin sections within -->
+        <!-- ALL SECTIONS - TAKE 100% OF DESIGNATED SPACE -->
 
-        <!-- parent div to display info side by side -->
-        <div class="home-parent">
-
-            <!-- box for image - box for now -->
-            <div class="home-img-parent">
-                <!-- image here -->
-                <div class="home-img"></div>
-            </div>
-
-            <!-- box for all text -->
-            <div class="home-txt-parent">
-
-                <!-- small desc -->
-                <div class="home-txt-sub">
-                    <p>Hi, I'm Zaydee. It's great to meet you.</p>
+        <!-- home section -->
+        <section class="zdc-home" id="home">
+            <!-- begin sections within -->
+    
+            <!-- parent div to display info side by side -->
+            <div class="home-parent">
+    
+                <!-- parent holder for image -->
+                <div class="home-img-parent">
+                    <!-- image -->
+                    <div class="home-img"></div>
                 </div>
-
-                <!-- small abt -->
-                <div class="home-txt-abt">
-                    <p>I am passionate about creating impactful digital experiences through code and design.</p>
-
-                    <div class="home-txt-quote">
-                        <blockquote>
-                            <p>"Dile que sí, aunque te estes muriendo de miedo, aunque después te arrepientas, porque de todos modos te vas arrepentir toda la vida si le contestas que no."</p>
-                            <footer>- Gabriel García Márquez</footer>
-                        </blockquote>
+    
+                <!-- box for all text -->
+                <div class="home-txt-parent">
+    
+                    <!-- inteo text - will have fade transition -->
+                    <div class="home-fade">
+                        <p>Hi, I'm Zaydee.</p>
+                        <p>It's great to meet you.</p>
+                    </div>
+                    <!-- small desc -->
+                    <div class="home-txt-sub">
+                        <p>I am passionate about creating impactful digital experiences through code and design.</p>
+                     
+                    </div>
+    
+                    <!-- "branding" -->
+                    <div class="home-branding">
+                        <p>Zealous. Dedicated. Catalytic.</p>
+    
                     </div>
 
+                      <!-- more abt me -->
+            <div class="home-txt-more">
+                <a href="#about" style="color: #000; text-decoration: none;">&#8594; More About Me</a>
+            </div>
                 </div>
             </div>
-        </div>
-        <!-- more abt me -->
-        <div class="home-txt-more" style="margin-left: 1200px;">
-            <a href="about.html" style="color: #000;">&#8594; More About Me</a>
-        </div>
-    </section>
+          
+        </section>
 
-    <!-- begin section for work -->
-    <div class="zdc-work" id="work">
-        <!-- intro text -->
-        <h1 style="margin-top: 250px;">Creation Showcase</h1>
-
+        <!-- work section -->
+        <div class="zdc-work" id="work">
+              <!-- intro text -->
+        <p class="work-intro">My Projects &#8595;</p>
+       
+        <!-- ALL PROJECTS HERE -->
         <!-- booknook -->
-        <div class="work-parent">
+         <div class="work-parent">
 
             <!-- text parent holder -->
             <div class="work-txt-parent">
@@ -91,7 +99,7 @@
                 <div class="work-txt-title">BookNook</div>
 
                 <!-- description of project -->
-                <div class="work-txt-descrip"> Welcome to BookNook, an exquisitely crafted online bookstore and literary hub, dedicated to seamless browsing. Throughout its development, I managed every stage of the process, utilizing problem-solving abilities and technical proficiency to ensure an intuitive user experience. My responsibilities included overseeing design, algorithm development, performance optimization, and ensuring seamless functionality.</div>  
+                <div class="work-txt-descrip">Welcome to BookNook, an online bookstore and literary hub crafted for seamless browsing. I oversaw every stage of development, ensuring an intuitive user experience through design, algorithm development, and performance optimization.</div>  
                 <!-- tags = what code used -->
                 <div class="work-tags">
                     <p>HTML </p>
@@ -114,45 +122,44 @@
                 </div>
             </div>
         </div>
+
+         <!-- eventsy -->
+         <div class="work-parent">
+
+            <!-- text parent holder -->
+            <div class="work-txt-parent">
         
-        <!-- eventsy -->
-        <div class="work-parent">
-
-    <!-- text parent holder -->
-    <div class="work-txt-parent">
-
-        <!-- project title -->
-        <div class="work-txt-title">Eventsy</div>
-
-        <!-- description of project -->
-        <div class="work-txt-descrip"> Welcome to our event management web application, where meticulous attention to detail meets flawless functionality. As the sole developer, I oversaw every aspect of its creation, ensuring seamless integration of features to simplify event planning. With a keen emphasis on responsiveness, our site adapts effortlessly to your needs. Start planning your next event with confidence and ease!</div>  
-        <!-- tags = what code used -->
-        <div class="work-tags">
-            <p>HTML </p>
-            <p>CSS</p>
-            <p>SCSS </p>
-            <p>jQuery </p>
+                <!-- project title -->
+                <div class="work-txt-title">Eventsy</div>
+        
+                <!-- description of project -->
+                <div class="work-txt-descrip"> An event management web application that ensures flawless functionality with meticulous attention to detail. It adapts effortlessly to user needs, simplifying event planning. As the sole developer, I oversaw every aspect of its creation, guaranteeing seamless feature integration and user-centric design. </div>  
+                <!-- tags = what code used -->
+                <div class="work-tags">
+                    <p>HTML </p>
+                    <p>CSS</p>
+                    <p>SCSS </p>
+                    <p>jQuery </p>
+                </div>
+        
+                <!-- icons - link aa+ github if applicable (circle for now) -->
+                <div class="work-icons">
+                    <div class="icon"> <a href="https://in-info-web4.informatics.iupui.edu/~zadomin/final-project/" target="_blank" style ="text-decoration: none; color: #000;"><i class="gg-link"></i></a></div>
+                    <a href=" https://github.com/N215-zadomin/final-project" target="_blank" style="text-decoration: none; color: #000; margin-top: -18.5px;"> <i style="font-size:24px" class="fa" color="#000">&#xf09b;</i></a>
+                </div>
+            </div>
+        
+            <!-- image parent holder -->
+            <div class="work-img-parent">
+        
+                <!-- actual image -->
+                <div class="work-set work-img2">
+                </div>
+            </div>
         </div>
 
-        <!-- icons - link aa+ github if applicable (circle for now) -->
-        <div class="work-icons">
-            <div class="icon"> <a href="https://in-info-web4.informatics.iupui.edu/~zadomin/final-project/" target="_blank" style ="text-decoration: none; color: #000;"><i class="gg-link"></i></a></div>
-            <a href=" https://github.com/N215-zadomin/final-project" target="_blank" style="text-decoration: none; color: #000; margin-top: -18.5px;"> <i style="font-size:24px" class="fa" color="#000">&#xf09b;</i></a>
-        </div>
-    </div>
-
-    <!-- image parent holder -->
-    <div class="work-img-parent">
-
-        <!-- actual image -->
-        <div class="work-set work-img2">
-        </div>
-    </div>
-</div>
-
-
-        <!-- web dev -->
-        <div class="work-parent">
+         <!-- web dev -->
+         <div class="work-parent">
 
             <!-- text parent holder -->
             <div class="work-txt-parent">
@@ -161,7 +168,7 @@
                 <div class="work-txt-title"> Web Dev Conference</div>
 
                 <!-- description of project -->
-                <div class="work-txt-descrip">The Web Dev Conference is a sophisticated conference management tool designed to streamline your planning process. As both developer and designer, I focused on maximizing user experience through intricate design decisions. Our extensive session list covers various web-related topics, categorized by tags for personalized preferences. Additionally, I implemented a seamless function for easy customization of your conference experience. </div>
+                <div class="work-txt-descrip">A sophisticated conference management tool with an extensive session list covering various web-related topics, categorized by tags for personalized preferences. As both developer and designer, I ensured intricate design decisions and implemented seamless features for easy customization of the conference experience.  </div>
                 <!-- tags = what code used -->
                 <div class="work-tags">
                     <p>Vue.js </p>
@@ -185,8 +192,9 @@
             </div>
         </div>
 
-        <!-- smaller proj parent-->
-        <div class="work-small-parent">
+        <p class="work-intro" style="padding-top: 150px;">Want to see more?</p>
+          <!-- smaller proj parent-->
+          <div class="work-small-parent">
 
             <!-- project-parent - pawwfect -->
             <div class="work-small-proj">
@@ -254,8 +262,7 @@
 
                     <!-- small desc for proj -->
                     <div class="work-small-txt-des">
-                        A React Native app with Firebase Authentication, featuring a fully-styled, two-page interface. Users seamlessly create accounts, log in, and log out. Additionally, it offers daily affirmations to promote positivity and self-care, boosting confidence.
-                    </div>
+                        This React Native app with Firebase Authentication boasts a fully-styled, two-page interface, allowing users to seamlessly create accounts, log in, and log out. Provides daily affirmations to promote positivity and self-care, boosting confidence.                    </div>
                     <!-- tags -->
                     <div class="work-tags" style="margin-bottom: 30px; margin-top: -20px;">
                         <p style="margin-right: 100px;">React.js </p>
@@ -269,48 +276,101 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
 
-    <!-- begin section for footer -->
-    <section class="zdc-footer">
-        <!-- parent for footer -->
-        <div class="zdc-footer-parent">
-            <!-- holder for logo -->
-            <div class="footer-logo">
-                <!-- logo for site -->
-                <img src="/images/zdc-logo-blkw-removebg-preview.png" alt="zdc-logo-bw">
-
-                <!-- blowup name  -->
-                <div class="footer-blowup"><h1>ZAYDEE</h1></div>
-                <!-- copy rights dis flex -->
-                <div class="copy-rights">
-                    <p class="foot-words">ZEALOUS.</p>
-                    <p class="foot-words">DEDICATED.</p>
-                    <p class="foot-words">CATALYTIC.</p>
-                </div>
-            </div>
-
-            <!-- nav for footer -->
-            <div class="footer-sitemap">
-                SITEMAP
-                <ul class="footer-list">
-                    <a href="#work"><li>WORK</li></a>
-                    <a href="about.html"><li>ABOUT</li></a>                
-                    <a href="zdc-resume.pdf" target="_blank"><li>RESUME</li></a>
-                    <a href="contact.html"><li>CONTACT</li></a>
-                </ul>
-            </div>
-
-            <!-- socials links -->
-            <div class="footer-socials">
-                FOLLOW ME
-                <ul class="footer-list">
-                    <a href="https://www.instagram.com/z.ayydee/" target="_blank"><li>INSTAGRAM</li></a>
-                    <a href="https://www.linkedin.com/in/zaydee-dominguez-chang/" target="_blank"><li>LINKEDIN</li></a>                
-                    <a href="zdc-resume.pdf" target="_blank"><li>TWITTER</li></a>
-                </ul>
+        <!-- about section -->
+        <div class="zdc-about" id="about">
+            <div class="about-parent">
+                 <!-- box for all text -->
+          <div class="about-txt-parent">
+            <div class="about-intro">Crafting My Narrative</div>
+            <!-- abt me -->
+            <div class="about-txt-par">My journey into web development began at age 11, igniting a lifelong passion. As a First-Generation Latina woman, I'm dedicated to mastering both front-end and back-end development while advocating for diversity and inclusion in tech. Beyond coding, I enjoy traveling, photography, concerts, and discovering new music.</div>
+        </div> 
+         <!-- box for image -->
+         <div class="about-img-parent">
+            <!-- image here -->
+            <div class="about-img"></div>
+        </div>
             </div>
         </div>
+
+        <!-- contact section -->
+        <div class="zdc-contact" id="contact">
+            <div class="break">Let's connect and collaborate on something great &#8595;</div>
+
+            <h1 class="contact-intro">Get in touch</h1>
+             <!-- form to send info -->
+             <form action="https://formspree.io/f/xayrorze" method="POST">
+
+                <label>First Name*:</label>
+                <input type="text" name="fname" autocomplete="off" required>
+
+                <label>Last Name*:</label>
+                <input type="text" name="lname" required>
+                <label>
+                    Email*:
+                </label>
+                <input type="email" name="email" required>
+                <label>
+                   Message*: </label>
+                    <textarea name="message"></textarea> <br>
+                      <button type="submit" class="form-btn">Send</button>
+                    </form>
+                </div>
+
+                <!-- footer section -->
+                 <section class="zdc-footer">
+                <div class="footer-branding">
+                <p class="foot-words">zealous</p>
+                <p class="foot-words">dedicated</p>
+                <p class="foot-words">catalytic</p>
+                <p class="foot-words">zealous</p>
+                <p class="foot-words">dedicated</p>
+                <p class="foot-words">catalytic</p>
+                <p class="foot-words">zealous</p>
+                <p class="foot-words">dedicated</p>
+                <p class="foot-words">catalytic</p>
+                <p class="foot-words">zealous</p>
+                <p class="foot-words">dedicated</p>
+                <p class="foot-words">catalytic</p> 
+                <p class="foot-words">zealous</p>
+                <p class="foot-words">dedicated</p>
+                <p class="foot-words">catalytic</p>
+                <p class="foot-words">zealous</p>
+                <p class="foot-words">dedicated</p>
+                <p class="foot-words">catalytic</p>
+                <p class="foot-words">zealous</p>
+                <p class="foot-words">dedicated</p>
+                <p class="foot-words">catalytic</p>
+                <p class="foot-words">zealous</p>
+                <p class="foot-words">dedic</p>
+                
+
+            </div>
+        <!-- blow up text -->
+        <div class="footer-blowup">let's connect.</div>
+        <p class="footer-smalltext">feel free to visit my relative links, and connect with me on linkedin. i can't wait to meet you.</p>
+        <div class="footer-link"> <a href="https://www.linkedin.com/in/zaydee-dominguez-chang/" target="_blank">linkedin</a></div> 
+        <br>
+          <hr>
+        <div class="footer-link"> <a href="https://calendly.com/zadomin" target="_blank">calendly</a></div>
+        <br>
+        <hr>
+        <div class="footer-link"> <a href="https://luddy.iupui.edu/news/story/luddy-lantinx-student-influence-idew" target="_blank">idew story</a></div>
+        <br>
+        <hr>
+        <div class="footer-link"> <a href="#contact">contact me</a></div>
+        <br>
+        <hr>
+        <br>
+        <p class="language">¿hablas español?</p>
+       <div class="footer-bottom">
+        <p class="location">[currently] in indianapolis, in</p>
+        <p class="copy">copyright 2024</p>
+        <p class="right">all rights reserved</p>
+       </div>
+       
     </section>
 </body>
 </html>

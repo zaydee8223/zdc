@@ -1,14 +1,15 @@
 /* GENERAL STYLING  */
-
 /* basic reset - helps organize everything */
 * {
  margin: 0;
  padding: 0;
  box-sizing: border-box;
 }
+
 html, body {
  height: 100%
 }
+
 h1, h2, h3, h4, h5, h6, p {
  margin-bottom: 16px
 }
@@ -26,6 +27,37 @@ li:hover {
     cursor: pointer;
     text-decoration: underline;
 }
+
+/* effect - hover when pressing more about me */
+.home-txt-more:hover {
+  text-decoration: underline;
+}
+
+/* hover effect for tags */
+.work-tags p:hover {
+  color:gray
+}
+
+  /* hover effect for icons */
+  .work-icons i:hover{
+    color: gray;
+    cursor: pointer;
+  }
+
+    /* hover for small work projects */
+    .work-proj:hover{
+      transform: translateY(-2px);
+      background-color: #fff;
+    }
+
+    /* hover effect for btn */
+.form-btn:hover {
+  color: #fff;
+  background-color: #181818;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
 /* general fonts */
 /* home + blowup */
 @font-face {
@@ -57,25 +89,36 @@ li:hover {
     src: url(./fonts/Sora/static/Sora-Regular.ttf);
   }
 
-  /* BEGIN NAV CONTENT */
+  /* bold for emphasis */
+  @font-face {
+    font-family: SoraBold;
+    src: url(./fonts/Sora/static/Sora-Bold.ttf);
+  }
 
-/* bigger nav */
-.det-nav {
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    background-color: #ffffff;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
+  /* footer blowup text */
+  @font-face {
+    font-family: footerCursive;
+    src: url(./fonts/rengard-font/RengardfreeRegular-JR3MB.otf);
+  }
+
+  /* copyright text */
+  @font-face {
+    font-family: footerCursiveItalic;
+    src: url(./fonts/rengard-font/RengardfreeItalic-GOE8a.otf);
+  }
+
+  /* NAV CONTENT */
+
 /*  navigation */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 90px;
-    margin-top: 10px;
+    width: 100%; 
+    background-color: #e8e0db;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 /* logp */
@@ -101,101 +144,89 @@ nav {
     font-family: SoraRegular;
 }
 
-/* all sections to be 100% of page */
+/* line */
+.line{
+  background-color: #000;
+  width: 100%;
+  height: 0.5px;
+}
+
+/* ALL SECTIONS - 100% OF PAGE */
 section {
     height: 100%; 
 }
 
-/* BEGIN HOME CONTENT */
-/* home section */
+/* HOME CONTENT */
+/* entire home section */
 .zdc-home {
-    font-size: 50px;
-    text-align: center;
-    margin: 200px auto 200px;
-
+ background-color: #e8e0db;
 }
-/* h1 intro */
-/* will fade in */
-.home-fade {
-    overflow: hidden; 
-    margin-bottom: 100px;
-    letter-spacing: 10px;
-    font-family: UrbanistBold;
-    color: #181818;
 
-  }
-  
-  /* actual animation */
-  .home-fade h1 {
-    display: inline-block; 
-    white-space: nowrap; 
-    overflow: hidden; 
-    animation: fadeIn 2s ease-in forwards; 
-  }
-  
-  /* keyframes */
-  @keyframes fadeIn {
-    from { opacity: 0; } /* Start with opacity set to 0 */
-    to { opacity: 1; } /* End with opacity set to 1 */
-  }
-  
 /* home parent portion */
 .home-parent {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-left: 150px;
-    margin-top: 200px;
+    justify-content: space-between;
 }
 
-/* home image */
+/* image */
 .home-img {
-    width: 500px;
-    height: 900px;
-    margin-top: -200px;
-    background-image: url(../images/zdc-home-n.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  width: 850px;
+  height: 858px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-image: url(../images/zdc-home.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* text parent */
-.home-txt-parent{
-    margin-left: 100px;
-}
-
-/* home text small desc */
+/* intro text - will fade in */
+  .home-fade { 
+    color: #181818;
+    overflow: hidden; 
+    font-size: 70px;
+    letter-spacing: 5px;
+    white-space: nowrap; 
+    display: inline-block; 
+    font-family: UrbanistBold;
+    padding-right: 30px;
+    text-align: center;
+     animation: fadeIn 2s ease-in forwards; 
+  }
+  
+  /* keyframes, for transiton (for opacity)*/
+  @keyframes fadeIn {
+    from { opacity: 0; } 
+    to { opacity: 1; } 
+  }
+  
+/* home text about */
 .home-txt-sub{
-text-align: center;
-/* margin-top: -210px; */
-margin-left: -100px;
-margin-bottom: 150px;
-/* margin-top: -480px; */
-font-size: 40px;
-width: 100%;
+  font-size: 35px;
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
 font-family: UrbanRegular;
-
 }
 
-
-/* home small about */
-.home-txt-abt {
-font-size: 20px;
+/* home small branding */
+.home-branding {
+font-size: 17.5px;
 width: 700px;
-margin-top: 250px;
-margin-right: 200px;
-margin-bottom: 100px;
-text-align: left;
+margin: 0 auto;
+text-align: center;
 font-family: SoraRegular;
- }
-
-/* home more abt me */
-.home-txt-more {
-font-size: 18px;
-text-decoration: underline;
-font-family: SoraRegular;
-
 }
+
+/*  more abt me */
+.home-txt-more {
+font-size: 16px;
+margin-top: 220px;
+margin-left: 600px;
+font-family: SoraRegular;
+}
+
 
 /* skills portion */
 .home-skills {
@@ -240,20 +271,22 @@ font-family: SoraRegular;
     transform: translateY(-2px);
   }
  
-  /* BEGIN WORK */
+  /* WORK CONTENT*/
   /* work section */
-  .zdc-work {
-    font-size: 40px;
-    margin-left: 160px;
-    font-family: UrbanMedium;
-  }
 
+/* intro text for section */
+  .work-intro {
+    font-family: UrbanMedium;
+    font-size: 25px;
+    padding-top: 50px;
+    padding-left: 50px;
+  }
   /* work parent */
   .work-parent {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 1000px;
+    width: 1400px;
+    margin: 0 auto;
     margin-bottom: 100px;
 
   }
@@ -265,16 +298,15 @@ font-family: SoraRegular;
 
   /* work proj title */
   .work-txt-title{
-    font-size: 40px;
-    width: 100%;
+  font-size: 40px;
    text-align: left;
-    margin-bottom: 30px;
+  margin-bottom: 30px;
   }
 
   /* work proj descrip */
   .work-txt-descrip{
     font-size: 20px;
-    width: 500px;
+    width: 600px;
     margin-bottom: 30px;
   }
 
@@ -291,21 +323,10 @@ font-family: SoraRegular;
     margin-right: 30px;
 }
 
-/* hover effect for tags */
-.work-tags p:hover {
-    color:gray
-}
-
   /* icons */
   .work-icons {
     margin-left: 170px;
     display: flex;
-  }
-
-  /* hover effect */
-  .work-icons i:hover{
-    color: gray;
-    cursor: pointer;
   }
   
   /* margins for icons */
@@ -316,8 +337,8 @@ font-family: SoraRegular;
 
   /* work image parent */
   .work-img-parent{
-    width: 400px;
-    height: 200px;
+    width: 500px;
+    height: 300px;
   }
 
 /* setup for all work images */
@@ -347,21 +368,13 @@ font-family: SoraRegular;
     background-image: url(../images/zdc-webdev.png);
   }
 
-
   /* smaller proj parent */
   .work-small-parent{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 200px;
-    margin-right: 150px;
-    margin-bottom: 200px;
+    margin-top: 100px;
   }
-
-  /* project parent
-  .work-small-proj{
-
-  } */
 
   /* actual proj */
   .work-proj {
@@ -380,37 +393,33 @@ font-family: SoraRegular;
   .work-small-txt-des{
     text-align: center;
     font-size: 18px;
-    width: 75%;
+    width: 350px;
     margin: 0 auto;
+    margin-top: 50px;
     margin-bottom: 50px;
   }
-
 
   /* actual project */
   .work-proj{
     width: 450px;
     height: 380px;
-    background-color: #f6f5f5;
+    background-color: #e8e0db;
     border-radius: 20px;
     margin-right: 50px;
     border: 1px solid #000;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   }
 
-/* BEGIN ABOUT */
+/* ABOUT CONTENT */
 /* about section */
-.zdc-about {
-    font-size: 40px;
-    margin: 200px auto 200px;
+.zdc-about{
+  padding-top: 150px;
 }
-
 /* about intro */
 .about-intro {
-    color: #fff;
-    margin-top: 150px;
-    margin-left: 200px;
-    margin-bottom: 150px;
-    font-family: UrbanMedium;
+  font-family: UrbanMedium;
+  font-size: 40px;
+  margin-bottom: 50px;
 }
 
 /* about parent */
@@ -420,14 +429,9 @@ font-family: SoraRegular;
     justify-content: space-evenly;
 }
 
-/* about text parent */
-.about-txt-parent{
-    margin-top: -100px;
-}
-
 /* about text desc  */
 .about-txt-par{
-    color: #fff;
+    color: #000;
     font-size: 20px;
     width: 750px;
     line-height: 2;
@@ -437,42 +441,39 @@ font-family: SoraRegular;
 
 /* about image parent */
 .about-img-parent {
-    width: 350px;
-    height: 900px;
+    width: 550px;
+    height: 600px;
    
 }
 
-/* about image here */
+/* about image  */
 .about-img{
-    margin-top: -50px;
-    width: 450px;
-    height: 900px;
-    margin-right: 150px;
+    width: 550px;
+    height: 600px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../images/zdc-about-pp.jpg);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    background-image: url(../images/zdc-about.jpg);
 }
 
-/* BEGIN CONTACT */
-/* contact section */
-.zdc-contact{
-    font-size: 40px;
-    margin: 200px auto 200px;
+/* break up abt and contact */
+.break{
+  font-family: UrbanMedium;
+  font-size: 25px;
+  padding-left: 70px;
 }
+
+/*  CONTACT CONTENT */
 
 /* contact intro */
 .contact-intro{
-    color: #000;
-    margin-top: 150px;
-    margin-left: 350px;
-    font-family: UrbanMedium;
+  font-family: UrbanMedium;
+  font-size: 40px;
+  padding-top: 90px;
+  padding-left: 700px;
 }
 
-/* contact text parent */
-.contact-txt-form-parent{
-    margin-top: -100px;
-}
 
 /* contact desc */
 .contact-txt-desc{
@@ -489,13 +490,14 @@ font-family: SoraRegular;
 
 /* overall form */
 form {
-   margin-top: 70px;
-   margin-left: 150px;
+  margin-top: 100px;
+   margin-left: 500px;
+   margin-bottom: 150px;
 }
 
 /* labels */
 label {
-    font-size: 18px;
+    font-size: 20px;
     color: #000;
     display: block;
     margin-bottom: 10px;
@@ -507,7 +509,7 @@ label {
 input {
     font-size: 17px;
     margin-bottom: 20px;
-    width: 400px;
+    width: 700px;
     height: 50px;
     padding-left: 10px;
     color: #000;
@@ -527,14 +529,20 @@ input:focus {
 /* textarea */
 textarea {
     margin-bottom: 20px;
-    width: 400px;
-    height: 90px;
+    width: 700px;
+    height: 100px;
     padding-top: 10px;
     border: 2px solid #000;
-    background-color: #f6f5f5;
+    background-color: #e8e0db;
     color: #000;
     padding-left: 10px;
     font-family: UrbanRegular;
+    font-size: 17px;
+}
+
+/* when active - turn white */
+textarea:focus {
+  background-color: #fff;
 }
 
 /* button */
@@ -550,7 +558,7 @@ textarea {
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
-  margin-left: 45px;
+  margin-left: 200px;
   min-height: 60px;
   min-width: 0;
   outline: none;
@@ -566,123 +574,97 @@ textarea {
   font-family: UrbanRegular;
 }
 
-/* hover effect for btn */
-.form-btn:hover {
-  color: #fff;
-  background-color: #181818;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
-}
-
 /* when active */
 .form-btn:active {
   box-shadow: none;
   transform: translateY(0);
 }
 
-/* contact image parent */
-.contact-img-parent{
-    width: 350px;
-    height: 900px;
-}
-
-/* contact image */
-.contact-img{
-    margin-top: -50px;
-    width: 450px;
-    height: 900px;
-    margin-right: 150px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../images/zdc-contact-map.png);
-}
-
-/* BEGIN FOOTER */
+/* FOOTER CONTENT */
 /* actual footer section */
 .zdc-footer {
     background-color: #181818;
 }
 
-/* footer parent */
-.zdc-footer-parent{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-/* footer logo */
-.footer-logo{
-    width: 800px;
-    height: 500px;
-}
-
-/* image for logo */
-.footer-logo img {
-    margin-left: -200px;
-    width: 800px;
-    height: 500px;
-    margin-top: 100px;
-}
-
-/* blowup text w name */
+/* blowup text - lets connect */
 .footer-blowup{
-    font-size: 100px;
+  font-size:150px;
     color: #fff;
-    width: 1000px;
-    margin: -50px auto 0 400px;
-    letter-spacing: 16px;
-    font-family: UrbanistBold;
-}
-
-/* smaller dis flex for copy + rights */
-.copy-rights {
-    margin-top: 110px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   font-family: UrbanRegular;
-}
-
-/* basic styling for both */
-.foot-words {
+    width: 100%;
     margin-top: 50px;
-    color: #fff;
-    font-size: 16px;
-    margin-right: 550px;
+   text-align: center;
+   font-family: footerCursive;
+    
 }
 
-/* same color for both foot elements */
-.footer-socials{
-    color: #fff;
-    /* start w basic margin */
-    margin-top: 70px ;
-    font-family: SoraRegular;
+/* thank you text in footer */
+.footer-smalltext {
+  color: #fff;
+  margin-top: 40px;
+  font-size: 20px;
+  padding-left: 20px;
+  font-family: UrbanRegular;
 
 }
 
-/* footer sitemap spef. margin */
-.footer-sitemap{
-    color: #fff;
-    margin-top: 100px;
-    font-family: SoraRegular;
-
- }
-/* list in footer */
-.footer-list{
-    margin-top: 20px;
-    list-style-type: none;
-    font-family: SoraRegular;
+/* bottom portion of footer */
+.footer-bottom {
+  display: flex;
+  padding-left: 20px;
+  justify-content: space-between;
 }
 
-/* links for list */
-.footer-list a {
-    color: #fff;
-    text-decoration: none;
+/* styling for bottom portion of footer */
+.location, .copy, .right{
+  color: #fff;
+  margin-top: 130px;
+  font-size: 16px;
+  font-family: UrbanRegular;
 }
 
-/* seperate margin for indv list */
-li {
-    margin-bottom: 20px;
+/* extra fixes to copy */
+.copy {
+  margin-right: 110px;
+}
+/* extra fixes to rights */
+.right {
+  padding-right: 25px;
+}
+/* language  */
+.language {
+  color: #fff;
+  font-size: 16px;
+  padding-left: 20px;
+
+  font-family: UrbanRegular;
+}
+
+/* smaller dis flex for branding at top */
+.footer-branding {
+   display: flex;
+   font-family: footerCursiveItalic;
+}
+
+/* basic styling for words in branding */
+.foot-words {
+  margin-right: 10px;
+    color: #fff;
+    font-size: 13px;
+}
+
+/* big links in footer */
+.footer-link{
+  font-size:50px;
+  color: #fff;
+  font-family: UrbanRegular;
+  height: 50px;
+  margin-top: 30px;
+  padding-left: 20px;
+
+}
+
+/* removing decorations */
+.footer-link a{
+  text-decoration: none;
+  color: #fff;
 }
