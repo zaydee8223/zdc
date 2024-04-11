@@ -657,11 +657,10 @@ textarea:focus {
 
 /* RESPONSIVENESS TO SITE */
 
-
 @media (max-width: 768px) {
   /* avoids overflow scrolling */
   body {
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
   }
 
 
