@@ -663,7 +663,6 @@ textarea:focus {
     overflow-x: hidden;
   }
 
-
   .logo {
     display: none;
   }
@@ -716,9 +715,8 @@ textarea:focus {
 
 /* image */
 .home-img {
-  width: 400px; /* Adjust image width to 100% for responsiveness */
-  max-width: 850px; /* Set max-width to maintain image aspect ratio */
-  height: 400px; /* Allow height to adjust based on width */
+  max-width: 400px; /* Set max-width to maintain image aspect ratio */
+  max-height: 400px; /* Allow height to adjust based on width */
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   background-image: url(../images/zdc-home.jpg);
   background-position: center;
@@ -728,9 +726,9 @@ textarea:focus {
 
 /* parent for all text */
 .home-txt-parent {
-  width: 100%; /* Adjust width to 100% for responsiveness */
-  max-width: 1000px; /* Set max-width to limit text width */
-  padding: 0 20px; /* Add padding for better spacing */
+  width: 90%; /* Adjust width to 100% for responsiveness */
+  max-width: 90%; /* Set max-width to limit text width */
+  padding: 0 5%; /* Add padding for better spacing */
   box-sizing: border-box; /* Include padding in width calculation */
   text-align: center; /* Center align text */
   margin: 0 auto;
@@ -739,7 +737,7 @@ textarea:focus {
 /* intro text */
 .home-intro {
   color: #000;
-  font-size: 36px; /* Adjust font size for smaller screens */
+  font-size: 6vw; /* Adjust font size for smaller screens */
   padding-top: 30px; /* Adjust padding for better spacing */
   font-family: UrbanMedium;
   width: 500px;
@@ -784,9 +782,9 @@ textarea:focus {
   margin: 0 auto;
 }
 
-.work-intro {
+/* .work-intro {
   margin-top: -50px;
-}
+} */
 .work-icons {
 align-items: center;
 margin-bottom: 30px;
@@ -838,25 +836,27 @@ margin-bottom: 30px;
   .about-parent {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
-    margin-top: -50px;
+    margin-top: -5%;
   }
 
   .about-intro {
     text-align: center;
+    font-size: 8vw;
+
   }
 
   /* Adjust width of about text */
   .about-txt-par {
-    width: 500px; /* Reduce width to fit smaller screens */
+    width: 90%; /* Reduce width to fit smaller screens */
     text-align: center; /* Center text */
     margin: 0 auto;
-    padding-bottom: 30px; /* Reduce bottom margin */
+    padding-bottom: 5%; /* Reduce bottom margin */
   }
 
   /* Reduce width and height of about image */
   .about-img, .about-img-parent {
-    width: 85%; /* Reduce width to fit smaller screens */
-    height: 400px; /* Allow height to adjust proportionally */
+    max-width: 95%; /* Reduce width to fit smaller screens */
+    max-height: auto; /* Allow height to adjust proportionally */
     margin: 0 auto;
   }
 
@@ -877,7 +877,7 @@ margin-bottom: 30px;
     }
   
     .contact-intro {
-      font-size: 35px;
+      font-size: 8vw;
       text-align: center;
     }
   
@@ -898,22 +898,22 @@ margin-bottom: 30px;
   
     /* Reduce margin for button */
     .form-btn {
-     margin-left: 100px;
+     margin-left: 20%;
     }
   
     /* blowup text */
     .footer-blowup {
-      font-size: 80px; /* Reduce font size */
-      margin-top: 50px; /* Reduce top margin */
+      font-size: 10vw; /* Reduce font size */
+      margin-top: 5%; /* Reduce top margin */
       text-align: center;
       letter-spacing: 1.5px; /* Adjust letter spacing */
     }
   
     /* small text in footer */
     .footer-smalltext {
-      font-size: 16px; /* Reduce font size */
+      font-size: 3vw; /* Reduce font size */
      text-align: center;
-      width: 400px;
+      width: 90%;
       margin: 0 auto;
     }
   
@@ -961,9 +961,10 @@ margin-bottom: 30px;
   
     /* big links in footer */
     .footer-link {
-      font-size: 30px; /* Reduce font size */
-      margin-top: 20px; /* Reduce top margin */
+     
       margin-bottom: 0;
+      font-size: 5vw; /* Adjust font size based on viewport width */
+    margin-top: 5%; /*
       text-align: center; /* Center text */
     }
 
