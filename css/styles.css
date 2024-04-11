@@ -107,7 +107,7 @@ li:hover {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 90px;
     width: 100%; 
     background-color: #e8e0db;
@@ -236,51 +236,8 @@ margin-top: 60px;
 margin-left: 600px;
 font-family: SoraRegular;
 }
-
-/* skills portion */
-.home-skills {
-    font-size: 18px;
-    margin-bottom: 50px;
-    font-family: UrbanRegular;
-}
-
-/* skills "btns" */
-.home-skills-btn {
-    appearance: none;
-    background-color: white;
-    border: 2px solid #1A1A1A;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #000;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    min-height: 60px;
-    min-width: 0;
-    outline: none;
-    padding: 16px 24px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 250px;
-    margin-top: 10px;
-    margin-left: 10px;
-    will-change: transform;
-  }
   
-  /* hover effect for btn */
-  .home-skills-btn:hover {
-    color: #fff;
-    background-color: #181818;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
- 
-  /* WORK CONTENT*/
+ /* WORK CONTENT*/
   /* work section */
 
 /* intro text for section */
@@ -683,3 +640,169 @@ textarea:focus {
   text-decoration: none;
   color: #fff;
 }
+
+
+/* RESPONSIVENESS TO SITE */
+
+
+@media (max-width: 768px) {
+  /* navigation */
+  nav {
+      flex-direction: column; /* Change flex direction to column for smaller screens */
+      align-items: flex-start; /* Align items to the start */
+      height: auto; /* Allow height to adjust based on content */
+  }
+
+  .logo {
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 10px; /* Add margin bottom for separation */
+  }
+
+  .links {
+    width: 600px;
+    margin: 0 auto 0 calc(15% - 20px);
+
+  }
+
+  .links a {
+      margin-right: 5; /* Remove right margin for links */
+      margin-bottom: 10px; /* Add bottom margin for separation */
+  }
+  /* home section */
+/* HOME CONTENT */
+
+/* entire home section */
+.zdc-home {
+  padding: 50px 0; /* Add padding for better spacing */
+}
+
+/* home parent portion */
+.home-parent {
+  display: flex;
+  flex-direction: column; /* Change flex direction to column for smaller screens */
+  align-items: center;
+  justify-content: center;
+}
+
+/* image */
+.home-img {
+  width: 400px; /* Adjust image width to 100% for responsiveness */
+  max-width: 850px; /* Set max-width to maintain image aspect ratio */
+  height: 400px; /* Allow height to adjust based on width */
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-image: url(../images/zdc-home.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* parent for all text */
+.home-txt-parent {
+  width: 100%; /* Adjust width to 100% for responsiveness */
+  max-width: 1000px; /* Set max-width to limit text width */
+  padding: 0 20px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+  text-align: center; /* Center align text */
+  margin: 0 auto;
+}
+
+/* intro text */
+.home-intro {
+  color: #000;
+  font-size: 36px; /* Adjust font size for smaller screens */
+  padding-top: 40px; /* Adjust padding for better spacing */
+  font-family: UrbanMedium;
+  width: 500px;
+}
+
+/* home text about - will be fading in */
+.home-typing {
+  font-size: 24px; /* Adjust font size for smaller screens */
+  padding-top: 30px; /* Adjust padding for better spacing */
+  font-family: UrbanRegular;
+  opacity: 0; /* Initially hide the div */
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* home small branding */
+.home-branding {
+  font-size: 14px; /* Adjust font size for smaller screens */
+  padding-top: 40px; /* Adjust padding for better spacing */
+  font-family: SoraRegular;
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* more abt me - typing transition */
+.home-txt-more {
+  font-size: 14px; /* Adjust font size for smaller screens */
+  padding-top: 40px; /* Adjust margin for better spacing */
+  font-family: SoraRegular;
+  text-align: center; 
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* work section */
+.work-parent {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  margin: 0 auto;
+}
+
+
+.work-icons {
+align-items: center;
+margin-bottom: 30px;
+}
+
+.work-txt-title {
+  font-size: 35px;
+  width: 300px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.work-txt-descrip {
+  font-size: 18px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-right: 150px;
+}
+
+.work-tags {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.work-set {
+  width: 400px;
+  height: 300px;
+  margin-left: 0; 
+}
+.work-small-parent{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  width: 630px;
+  margin: 0 auto;
+}
+
+.work-proj {
+  margin-bottom: 30px;
+}
+
+.work-proj .work-tags {
+
+  margin-left: 90px;
+}
+}
+
+
