@@ -437,7 +437,6 @@ font-family: SoraRegular;
 }
 
 /*  CONTACT CONTENT */
-
 /* contact intro */
 .contact-intro{
   font-family: UrbanMedium;
@@ -646,6 +645,10 @@ textarea:focus {
 
 
 @media (max-width: 768px) {
+  /* avoids overflow scrolling */
+  body {
+    overflow-x: hidden;
+  }
   /* navigation */
   nav {
       flex-direction: column; /* Change flex direction to column for smaller screens */
@@ -800,9 +803,144 @@ margin-bottom: 30px;
 }
 
 .work-proj .work-tags {
-
   margin-left: 90px;
 }
+
+  /* Reduce width of about-parent */
+  .about-parent {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: -50px;
+  }
+
+  .about-intro {
+    text-align: center;
+  }
+
+  /* Adjust width of about text */
+  .about-txt-par {
+    width: 500px; /* Reduce width to fit smaller screens */
+    text-align: center; /* Center text */
+    margin: 0 auto;
+    padding-bottom: 30px; /* Reduce bottom margin */
+  }
+
+  /* Reduce width and height of about image */
+  .about-img, .about-img-parent {
+    width: 85%; /* Reduce width to fit smaller screens */
+    height: 400px; /* Allow height to adjust proportionally */
+    margin: 0 auto;
+  }
+
+    /* Reduce font size for about intro */
+    .about-intro {
+      font-size: 35px;
+    }
+  
+    /* Reduce font size for about text */
+    .about-txt-par {
+      font-size: 18px;
+    }
+  
+    /* break text */
+    .break {
+      margin-top: -25px;
+      font-size: 20px;
+    }
+  
+    .contact-intro {
+      font-size: 35px;
+      text-align: center;
+    }
+  
+    /* Reduce width of form */
+    form {
+      width: 90%; /* Adjust width to fit smaller screens */
+      margin: 0 auto;
+    }
+  
+    label {
+      font-size: 20px;
+    }
+    /* Reduce width of inputs */
+    input,
+    textarea {
+      width: 100%; /* Adjust width to fit smaller screens */
+    }
+  
+    /* Reduce margin for button */
+    .form-btn {
+     margin-left: 100px;
+    }
+  
+    /* blowup text */
+    .footer-blowup {
+      font-size: 80px; /* Reduce font size */
+      margin-top: 50px; /* Reduce top margin */
+      text-align: center;
+      letter-spacing: 1.5px; /* Adjust letter spacing */
+    }
+  
+    /* small text in footer */
+    .footer-smalltext {
+      font-size: 16px; /* Reduce font size */
+     text-align: center;
+      width: 400px;
+      margin: 0 auto;
+    }
+  
+    /* bottom portion of footer */
+    .footer-bottom {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items */
+      margin-top: 30px;
+    }
+  
+    /* styling for bottom portion of footer */
+    .location, .copy, .right {
+      margin-top: 20px; /* Reduce top margin */
+      text-align: center; /* Center text */
+      margin: 10px 0; /* Adjust margin */
+    }
+  
+    /* extra fixes to copy */
+    .copy {
+      margin-right: 0; /* Remove right margin */
+    }
+  
+    /* extra fixes to rights */
+    .right {
+      padding-right: 0; /* Remove padding */
+    }
+  
+    /* parent for language and top */
+    .footer-lang-top {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items */
+      margin-top: 50px; /* Reduce top margin */
+    }
+  
+    /* language */
+    .language, .top {
+      padding: 0; /* Remove padding */
+      margin: 10px 0; /* Adjust margin */
+      text-align: center; /* Center text */
+    }
+  
+    .footer-link-parent {
+      margin-top: 50px;
+    }
+  
+    /* big links in footer */
+    .footer-link {
+      font-size: 30px; /* Reduce font size */
+      margin-top: 20px; /* Reduce top margin */
+      margin-bottom: 0;
+      text-align: center; /* Center text */
+    }
+
 }
+
+
 
 
