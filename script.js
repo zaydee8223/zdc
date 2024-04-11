@@ -58,3 +58,11 @@ function typeWriter(element, text, speed) {
     
     type();
 }
+
+
+//hamburger menu
+// Function to toggle menu visibility
+function toggleMenu() {
+    var links = document.querySelector('.links');
+    links.classList.toggle('active'); // Toggle 'active' class
+}

@@ -145,6 +145,20 @@ nav {
   height: 0.5px;
 }
 
+/* hamburger menu for responsiveness */
+.menu-icon {
+  display: none;
+}
+
+/* Add CSS for hamburger menu lines */
+.menu-icon .nav-line {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px;
+}
+
+
 /* ALL SECTIONS - 100% OF PAGE */
 section {
     height: 100%; 
@@ -647,31 +661,43 @@ textarea:focus {
 @media (max-width: 768px) {
   /* avoids overflow scrolling */
   body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
-  /* navigation */
-  nav {
-      flex-direction: column; /* Change flex direction to column for smaller screens */
-      align-items: flex-start; /* Align items to the start */
-      height: auto; /* Allow height to adjust based on content */
-  }
+
 
   .logo {
-    width: 100px;
-    margin: 0 auto;
-    margin-bottom: 10px; /* Add margin bottom for separation */
+    display: none;
   }
 
-  .links {
-    width: 600px;
-    margin: 0 auto 0 calc(15% - 20px);
-
+  .line {
+    display: none;
   }
+  .menu-icon {
+    display: block; /* Display hamburger menu icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding-left: 20px;
+}
 
-  .links a {
-      margin-right: 5; /* Remove right margin for links */
-      margin-bottom: 10px; /* Add bottom margin for separation */
-  }
+.links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Change flex direction to column */
+    align-items: center; /* Align items to the center */
+    position: absolute; /* Position menu absolutely */
+    top: 90px; /* Adjust top position */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    background-color: #e8e0db; /* Background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.links a {
+    margin: 10px 0; /* Add margin to links for separation */
+}
+
+/* Show links when menu icon is clicked */
+.active {
+    display: flex;
+}
   /* home section */
 /* HOME CONTENT */
 
@@ -686,6 +712,7 @@ textarea:focus {
   flex-direction: column; /* Change flex direction to column for smaller screens */
   align-items: center;
   justify-content: center;
+  margin-top: -40px;
 }
 
 /* image */
@@ -714,7 +741,7 @@ textarea:focus {
 .home-intro {
   color: #000;
   font-size: 36px; /* Adjust font size for smaller screens */
-  padding-top: 40px; /* Adjust padding for better spacing */
+  padding-top: 30px; /* Adjust padding for better spacing */
   font-family: UrbanMedium;
   width: 500px;
 }
@@ -722,7 +749,7 @@ textarea:focus {
 /* home text about - will be fading in */
 .home-typing {
   font-size: 24px; /* Adjust font size for smaller screens */
-  padding-top: 30px; /* Adjust padding for better spacing */
+  padding-top: 5px; /* Adjust padding for better spacing */
   font-family: UrbanRegular;
   opacity: 0; /* Initially hide the div */
   width: 400px;
@@ -741,7 +768,7 @@ textarea:focus {
 /* more abt me - typing transition */
 .home-txt-more {
   font-size: 14px; /* Adjust font size for smaller screens */
-  padding-top: 40px; /* Adjust margin for better spacing */
+
   font-family: SoraRegular;
   text-align: center; 
   width: 400px;
@@ -758,7 +785,9 @@ textarea:focus {
   margin: 0 auto;
 }
 
-
+.work-intro {
+  margin-top: -50px;
+}
 .work-icons {
 align-items: center;
 margin-bottom: 30px;
