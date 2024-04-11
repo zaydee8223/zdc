@@ -656,140 +656,133 @@ textarea:focus {
 
 
 /* RESPONSIVENESS TO SITE */
-
 @media (max-width: 768px) {
+
   /* avoids overflow scrolling */
   body {
     overflow-x: hidden;
   }
 
+  /* navigation */
+  /* hides the logo - hamburger menu */
   .logo {
     display: none;
   }
 
+  /* hides nav line - hamburger menu */
   .line {
     display: none;
   }
+
+  /* line icon - hamburger menu */
   .menu-icon {
-    display: block; /* Display hamburger menu icon */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    display: block; 
+    cursor: pointer; 
     padding-left: 20px;
 }
 
+/* links div in nav */
 .links {
-    display: none; /* Hide links by default */
-    flex-direction: column; /* Change flex direction to column */
-    align-items: center; /* Align items to the center */
-    position: absolute; /* Position menu absolutely */
-    top: 90px; /* Adjust top position */
-    left: 0; /* Align to the left */
-    width: 100%; /* Full width */
-    background-color: #e8e0db; /* Background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    position: absolute; 
+    top: 90px; 
+    left: 0; 
+    width: 100%; 
+    background-color: #e8e0db; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
+/* actual links in nav */
 .links a {
-    margin: 10px 0; /* Add margin to links for separation */
+    margin: 10px 0; 
 }
 
-/* Show links when menu icon is clicked */
+/* when icon is clicked, display the links */
 .active {
     display: flex;
 }
-  /* home section */
-/* HOME CONTENT */
 
+  /* home section */
 /* entire home section */
 .zdc-home {
-  padding: 50px 0; /* Add padding for better spacing */
+  padding: 50px 0; 
 }
 
 /* home parent portion */
 .home-parent {
   display: flex;
-  flex-direction: column; /* Change flex direction to column for smaller screens */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   margin-top: -40px;
 }
 
-/* image */
+/* home image */
 .home-img {
-  max-width: 400px; /* Set max-width to maintain image aspect ratio */
-  max-height: 400px; /* Allow height to adjust based on width */
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  background-image: url(../images/zdc-home.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  max-width: 400px; 
+  max-height: 400px;
 }
 
 /* parent for all text */
 .home-txt-parent {
-  width: 90%; /* Adjust width to 100% for responsiveness */
-  max-width: 90%; /* Set max-width to limit text width */
-  padding: 0 5%; /* Add padding for better spacing */
-  box-sizing: border-box; /* Include padding in width calculation */
-  text-align: center; /* Center align text */
+  width: 90%; 
+  max-width: 90%; 
+  padding: 0 5%;
+  text-align: center; 
   margin: 0 auto;
 }
 
 /* intro text */
 .home-intro {
-  color: #000;
-  font-size: 6vw; /* Adjust font size for smaller screens */
-  padding-top: 30px; /* Adjust padding for better spacing */
-  font-family: UrbanMedium;
+  font-size: 6vw; 
+  padding-top: 30px;
   width: 500px;
 }
 
-/* home text about - will be fading in */
+/* home about  */
 .home-typing {
-  font-size: 24px; /* Adjust font size for smaller screens */
-  padding-top: 5px; /* Adjust padding for better spacing */
-  font-family: UrbanRegular;
-  opacity: 0; /* Initially hide the div */
+  font-size: 24px; 
+  padding-top: 5px;
   width: 400px;
   margin: 0 auto;
 }
 
 /* home small branding */
 .home-branding {
-  font-size: 14px; /* Adjust font size for smaller screens */
-  padding-top: 40px; /* Adjust padding for better spacing */
-  font-family: SoraRegular;
+  font-size: 14px; 
+  padding-top: 40px; 
   width: 400px;
   margin: 0 auto;
 }
 
-/* more abt me - typing transition */
+/* more abt me*/
 .home-txt-more {
-  font-size: 14px; /* Adjust font size for smaller screens */
-
-  font-family: SoraRegular;
+  font-size: 14px; 
   text-align: center; 
   width: 400px;
   margin: 0 auto;
 }
 
 /* work section */
+/* work parent */
 .work-parent {
   display: flex;
   flex-direction: column; 
   align-items: center;
   justify-content: center;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
-/* .work-intro {
-  margin-top: -50px;
-} */
+/* icons for projects */
 .work-icons {
 align-items: center;
 margin-bottom: 30px;
 }
 
+/* title of project - main */
 .work-txt-title {
   font-size: 35px;
   width: 300px;
@@ -797,6 +790,8 @@ margin-bottom: 30px;
   padding-bottom: 30px;
 }
 
+
+/* descriptions of project - main */
 .work-txt-descrip {
   font-size: 18px;
   margin: 0 auto;
@@ -805,16 +800,20 @@ margin-bottom: 30px;
   padding-right: 150px;
 }
 
+/* work tags - main */
 .work-tags {
   width: 400px;
   margin: 0 auto;
 }
 
+/* images of work */
 .work-set {
   width: 400px;
   height: 300px;
   margin-left: 0; 
 }
+
+/* final three projects */
 .work-small-parent{
   display: flex;
   flex-direction: column; 
@@ -824,51 +823,47 @@ margin-bottom: 30px;
   margin: 0 auto;
 }
 
+/* actual project div */
 .work-proj {
   margin-bottom: 30px;
 }
 
+
+/* tags inside smaller work projects */
 .work-proj .work-tags {
   margin-left: 90px;
 }
 
-  /* Reduce width of about-parent */
+/* about section */
+
+/* about parent */
   .about-parent {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column; 
+    align-items: center;
     margin-top: -5%;
   }
 
+  /* title of about */
   .about-intro {
     text-align: center;
-    font-size: 8vw;
-
+    font-size: 35px;
   }
 
-  /* Adjust width of about text */
+  /* parent of text for abt */
   .about-txt-par {
-    width: 90%; /* Reduce width to fit smaller screens */
-    text-align: center; /* Center text */
+    width: 90%; 
+    text-align: center; 
     margin: 0 auto;
-    padding-bottom: 5%; /* Reduce bottom margin */
+    font-size: 18px;
+    padding-bottom: 5%;
   }
 
-  /* Reduce width and height of about image */
+  /* about image */
   .about-img, .about-img-parent {
-    max-width: 95%; /* Reduce width to fit smaller screens */
-    max-height: auto; /* Allow height to adjust proportionally */
+    max-width: 95%; 
+    max-height: auto;
     margin: 0 auto;
   }
-
-    /* Reduce font size for about intro */
-    .about-intro {
-      font-size: 35px;
-    }
-  
-    /* Reduce font size for about text */
-    .about-txt-par {
-      font-size: 18px;
-    }
   
     /* break text */
     .break {
@@ -876,42 +871,45 @@ margin-bottom: 30px;
       font-size: 20px;
     }
   
+    /* contact title */
     .contact-intro {
       font-size: 8vw;
       text-align: center;
     }
   
-    /* Reduce width of form */
+   /* form */
     form {
-      width: 90%; /* Adjust width to fit smaller screens */
+      width: 90%;
       margin: 0 auto;
     }
   
+    /* labels */
     label {
       font-size: 20px;
     }
-    /* Reduce width of inputs */
+
+   /* input and text area */
     input,
     textarea {
-      width: 100%; /* Adjust width to fit smaller screens */
+      width: 100%; 
     }
   
-    /* Reduce margin for button */
+    /* margin of btn */
     .form-btn {
      margin-left: 20%;
     }
   
     /* blowup text */
     .footer-blowup {
-      font-size: 10vw; /* Reduce font size */
-      margin-top: 5%; /* Reduce top margin */
+      font-size: 10vw; 
+      margin-top: 5%;
       text-align: center;
-      letter-spacing: 1.5px; /* Adjust letter spacing */
+      letter-spacing: 1.5px; 
     }
   
     /* small text in footer */
     .footer-smalltext {
-      font-size: 3vw; /* Reduce font size */
+      font-size: 3vw;
      text-align: center;
       width: 90%;
       margin: 0 auto;
@@ -919,53 +917,52 @@ margin-bottom: 30px;
   
     /* bottom portion of footer */
     .footer-bottom {
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items */
+      flex-direction: column; 
+      align-items: center; 
       margin-top: 30px;
     }
   
-    /* styling for bottom portion of footer */
+    /*bottom portion of footer, actual text*/
     .location, .copy, .right {
-      margin-top: 20px; /* Reduce top margin */
-      text-align: center; /* Center text */
-      margin: 10px 0; /* Adjust margin */
+      margin-top: 20px; 
+      text-align: center; 
+      margin: 10px 0; 
     }
   
     /* extra fixes to copy */
     .copy {
-      margin-right: 0; /* Remove right margin */
+      margin-right: 0; 
     }
   
     /* extra fixes to rights */
     .right {
-      padding-right: 0; /* Remove padding */
+      padding-right: 0; 
     }
   
     /* parent for language and top */
     .footer-lang-top {
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items */
-      margin-top: 50px; /* Reduce top margin */
+      flex-direction: column; 
+      align-items: center;
+      margin-top: 50px;
     }
   
-    /* language */
+    /* language and back to top text */
     .language, .top {
-      padding: 0; /* Remove padding */
-      margin: 10px 0; /* Adjust margin */
-      text-align: center; /* Center text */
+      padding: 0; 
+      margin: 10px 0; 
+      text-align: center; 
     }
   
+    /* parent for all the links in the footer  */
     .footer-link-parent {
       margin-top: 50px;
     }
   
     /* big links in footer */
     .footer-link {
-     
       margin-bottom: 0;
-      font-size: 5vw; /* Adjust font size based on viewport width */
-    margin-top: 5%; /*
-      text-align: center; /* Center text */
+      font-size: 5vw; 
+    margin-top: 5%; 
     }
 
 }
