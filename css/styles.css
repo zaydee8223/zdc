@@ -486,7 +486,9 @@ font-family: SoraRegular;
   font-family: UrbanMedium;
   font-size: 45px;
   padding-top: 90px;
-  padding-left: 700px;
+  padding-bottom: 50px;
+  width: 300px;
+  margin: 0 auto;
 }
 
 /* contact form */
