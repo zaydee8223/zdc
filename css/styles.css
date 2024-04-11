@@ -59,7 +59,7 @@ li:hover {
 }
 
 /* general fonts */
-/* home + blowup */
+/*  blowup */
 @font-face {
     font-family: UrbanistBold;
     src: url(./fonts/Urbanist/static/Urbanist-Bold.ttf);
@@ -95,18 +95,12 @@ li:hover {
     src: url(./fonts/Sora/static/Sora-Bold.ttf);
   }
 
-  /* footer blowup text */
-  @font-face {
-    font-family: footerCursive;
-    src: url(./fonts/rengard-font/RengardfreeRegular-JR3MB.otf);
-  }
 
-  /* copyright text */
+  /* lighter version of regular textx */
   @font-face {
-    font-family: footerCursiveItalic;
-    src: url(./fonts/rengard-font/RengardfreeItalic-GOE8a.otf);
+    font-family: SoraLight;
+    src: url(/css/fonts/Sora/static/Sora-Light.ttf);
   }
-
   /* NAV CONTENT */
 
 /*  navigation */
@@ -180,34 +174,49 @@ section {
   background-repeat: no-repeat;
 }
 
-/* intro text - will fade in */
-  .home-fade { 
-    color: #181818;
-    overflow: hidden; 
-    font-size: 70px;
-    letter-spacing: 5px;
-    white-space: nowrap; 
-    display: inline-block; 
-    font-family: UrbanistBold;
-    padding-right: 30px;
-    text-align: center;
-     animation: fadeIn 2s ease-in forwards; 
-  }
-  
-  /* keyframes, for transiton (for opacity)*/
-  @keyframes fadeIn {
-    from { opacity: 0; } 
-    to { opacity: 1; } 
-  }
-  
-/* home text about */
-.home-txt-sub{
-  font-size: 35px;
+/* parent for all text */
+.home-txt-parent {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* intro text */
+.home-intro {
   width: 700px;
   margin: 0 auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
-font-family: UrbanRegular;
+ text-align: center;
+    color: #000;
+    font-size: 55px;
+    padding-top: 80px;
+    letter-spacing: 5px;
+    font-family: UrbanMedium;
+}
+  
+/* home text about- will be fading in*/
+.home-typing{
+  text-align: center;
+  font-size: 30px;
+  padding-top: 200px;
+  width: 700px;
+  margin: 0 auto;
+  font-family: UrbanRegular;
+  opacity: 0; /* Initially hide the div */
+}
+
+/* fade in class */
+.fade-in {
+  animation: fadeInAnimation 1s ease-in forwards; /* Apply fade-in animation */
+
+}
+
+/* fade in animation keyframes */
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+      opacity: 1; /* Transition to opacity 1 */
+  }
 }
 
 /* home small branding */
@@ -216,17 +225,17 @@ font-size: 17.5px;
 width: 700px;
 margin: 0 auto;
 text-align: center;
+padding-top: 200px;
 font-family: SoraRegular;
 }
 
-/*  more abt me */
+/*  more abt me  - typing transition*/
 .home-txt-more {
 font-size: 16px;
-margin-top: 220px;
+margin-top: 60px;
 margin-left: 600px;
 font-family: SoraRegular;
 }
-
 
 /* skills portion */
 .home-skills {
@@ -298,16 +307,18 @@ font-family: SoraRegular;
 
   /* work proj title */
   .work-txt-title{
-  font-size: 40px;
+  font-size: 45px;
    text-align: left;
   margin-bottom: 30px;
+  font-family: UrbanMedium;
   }
 
   /* work proj descrip */
   .work-txt-descrip{
-    font-size: 20px;
+    font-size: 22px;
     width: 600px;
     margin-bottom: 30px;
+    font-family: SoraRegular;
   }
 
   /* tags */
@@ -316,6 +327,7 @@ font-family: SoraRegular;
     align-items: center;
     font-size: 18px;
     margin-left: 100px;
+    font-family: SoraLight;
   }
 
 /* basic margining... */
@@ -384,9 +396,10 @@ font-family: SoraRegular;
   /* title for project */
   .work-small-title{
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
     margin-top: 20px;
     margin-bottom: 30px;
+    font-family: UrbanMedium;
   }
 
   /* small desc for proj */
@@ -397,12 +410,13 @@ font-family: SoraRegular;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    font-family: SoraRegular;
   }
 
   /* actual project */
   .work-proj{
     width: 450px;
-    height: 380px;
+    height: 400px;
     background-color: #e8e0db;
     border-radius: 20px;
     margin-right: 50px;
@@ -413,12 +427,12 @@ font-family: SoraRegular;
 /* ABOUT CONTENT */
 /* about section */
 .zdc-about{
-  padding-top: 150px;
+  padding-top: 120px;
 }
 /* about intro */
 .about-intro {
   font-family: UrbanMedium;
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 50px;
 }
 
@@ -432,8 +446,8 @@ font-family: SoraRegular;
 /* about text desc  */
 .about-txt-par{
     color: #000;
-    font-size: 20px;
-    width: 750px;
+    font-size: 22px;
+    width: 650px;
     line-height: 2;
     font-family: SoraRegular;
 
@@ -458,10 +472,11 @@ font-family: SoraRegular;
 }
 
 /* break up abt and contact */
-.break{
+.break {
   font-family: UrbanMedium;
   font-size: 25px;
-  padding-left: 70px;
+  padding-top: 110px;
+  padding-left: 50px;
 }
 
 /*  CONTACT CONTENT */
@@ -469,35 +484,22 @@ font-family: SoraRegular;
 /* contact intro */
 .contact-intro{
   font-family: UrbanMedium;
-  font-size: 40px;
+  font-size: 45px;
   padding-top: 90px;
   padding-left: 700px;
-}
-
-
-/* contact desc */
-.contact-txt-desc{
-    color: #000;
-    font-size: 20px;
-    width: 600px;
-    line-height: 1.7;
-    text-align: center;
-    font-family: SoraRegular;
-
 }
 
 /* contact form */
 
 /* overall form */
 form {
-  margin-top: 100px;
-   margin-left: 500px;
-   margin-bottom: 150px;
+ width: 700px;
+ margin: 0 auto;
 }
 
 /* labels */
 label {
-    font-size: 20px;
+    font-size: 25px;
     color: #000;
     display: block;
     margin-bottom: 10px;
@@ -507,11 +509,10 @@ label {
 
 /* inputs */
 input {
-    font-size: 17px;
-    margin-bottom: 20px;
-    width: 700px;
+  font-size: 18px;
+    margin-bottom: 25px;
+    width: 720px;
     height: 50px;
-    padding-left: 10px;
     color: #000;
     border: none; 
     border-bottom: 2px solid #000; 
@@ -528,7 +529,7 @@ input:focus {
 
 /* textarea */
 textarea {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 700px;
     height: 100px;
     padding-top: 10px;
@@ -537,7 +538,7 @@ textarea {
     color: #000;
     padding-left: 10px;
     font-family: UrbanRegular;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 /* when active - turn white */
@@ -588,12 +589,13 @@ textarea:focus {
 
 /* blowup text - lets connect */
 .footer-blowup{
-  font-size:150px;
+  font-size: 150px;
     color: #fff;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
    text-align: center;
-   font-family: footerCursive;
+   letter-spacing: 2.3px;
+   font-family: UrbanistBold;
     
 }
 
@@ -609,6 +611,7 @@ textarea:focus {
 
 /* bottom portion of footer */
 .footer-bottom {
+  margin-top: 15px;
   display: flex;
   padding-left: 20px;
   justify-content: space-between;
@@ -630,26 +633,36 @@ textarea:focus {
 .right {
   padding-right: 25px;
 }
+
+/* parent for language and top */
+.footer-lang-top {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* language  */
 .language {
   color: #fff;
   font-size: 16px;
   padding-left: 20px;
-
   font-family: UrbanRegular;
 }
 
-/* smaller dis flex for branding at top */
-.footer-branding {
-   display: flex;
-   font-family: footerCursiveItalic;
+/* back to top text */
+.top {
+  color: #fff;
+  font-size: 16px;
+ padding-right: 20px;
+  font-family: UrbanRegular;
 }
 
-/* basic styling for words in branding */
-.foot-words {
-  margin-right: 10px;
-    color: #fff;
-    font-size: 13px;
+/* top link fixes */
+.top a{
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+
 }
 
 /* big links in footer */

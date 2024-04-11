@@ -22,3 +22,39 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+//fading and typing transition
+//waiting for dom to load
+document.addEventListener("DOMContentLoaded", function() {
+ 
+    
+    //select elements needed
+    var typingText = document.getElementById("fading-in");
+    var moreAbout = document.getElementById("more-about").querySelector("a");
+    
+
+    //add the fading transition
+    setTimeout(function() {
+        typingText.classList.add("fade-in");
+    }, 1000); 
+    
+    //after fade in, trigger typing
+    setTimeout(function() {
+        typeWriter(moreAbout, "→ More About Me", 100);
+    }, 4000); 
+});
+
+//typing transition
+function typeWriter(element, text, speed) {
+    var i = 0;
+    
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    type();
+}
