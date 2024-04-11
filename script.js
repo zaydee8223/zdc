@@ -31,7 +31,7 @@ function translatePage() {
     let content = document.documentElement.outerHTML;
 
     // exclude words for better ux
-    const wordsToPreserve = ["zdc", "BookNook", "Eventsy" , "Web Dev Conference", "Pawwfect Heart Grooming" , "JS Tic-Tac-Toe", "Affirmations Daily", "JavaScript", "React.js", "Firebase", "linkedin", "calendly"]; 
+    const wordsToPreserve = [ "portfolio", "zdc", "BookNook", "Eventsy" , "Web Dev Conference", "Pawwfect Heart Grooming" , "JS Tic-Tac-Toe", "Affirmations Daily", "JavaScript", "React.js", "Firebase", "linkedin", "calendly"]; 
 
     //replace the words, and assign placeholder
     const placeholders = {};
@@ -116,8 +116,3 @@ function toggleMenu() {
     var links = document.querySelector('.links');
     links.classList.toggle('active'); // active class toggled
 }
-
-
-
-
-
