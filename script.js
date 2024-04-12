@@ -23,17 +23,16 @@ function smoothScroll() {
 //invoke func when DOM is loaded
 document.addEventListener("DOMContentLoaded", smoothScroll);
 
-//translating page function
 function translatePage() {
-    const targetLanguage = 'es'; //language i want is spanish
+    const targetLanguage = 'es'; // language is spanish
 
     // grab the entire content of the page
     let content = document.documentElement.outerHTML;
 
-    // exclude words for better ux
-    const wordsToPreserve = [ "portfolio", "zdc", "BookNook", "Eventsy" , "Web Dev Conference", "Pawwfect Heart Grooming" , "JS Tic-Tac-Toe", "Affirmations Daily", "JavaScript", "React.js", "Firebase", "linkedin", "calendly"]; 
+    // exclude words for better UX
+    const wordsToPreserve = ["portfolio", "zdc", "BookNook", "Eventsy", "Web Dev Conference", "Pawwfect Heart Grooming", "JS Tic-Tac-Toe", "Affirmations Daily", "JavaScript", "React.js", "Firebase", "linkedin", "calendly", "Git Version Control", "Adobe Creative Cloud", "resume",];
 
-    //replace the words, and assign placeholder
+    //replace words and assign placeholders
     const placeholders = {};
     wordsToPreserve.forEach((word, index) => {
         const placeholder = `__${index}__`;
@@ -42,7 +41,7 @@ function translatePage() {
         content = content.replace(regex, placeholder);
     });
 
-    //making a post request to the translation api w unique key
+    // making a post request w unique api key
     fetch('https://translation.googleapis.com/language/translate/v2?key=AIzaSyCZZ4Fcf3uAfZczR46WjoBqu9ivgmKBSBw', {
         method: 'POST',
         headers: {
@@ -53,63 +52,51 @@ function translatePage() {
             target: targetLanguage,
         }),
     })
-    .then(response => response.json())
-    .then(data => {
-        // replace placeholders w original words
-        let translatedText = data.data.translations[0].translatedText;
-        Object.entries(placeholders).forEach(([placeholder, word]) => {
-            const regex = new RegExp(placeholder, 'g');
-            translatedText = translatedText.replace(regex, word);
-        });
+        .then(response => response.json())
+        .then(data => {
+            //adjusting gender words to match fem
+            let translatedText = data.data.translations[0].translatedText;
+            // replace masc pronouns w fem pronouns
+            translatedText = translatedText.replace(/\b(celoso|dedicado|catalítico|listo)\b/gi, match => {
+                switch (match.toLowerCase()) {
+                    case 'celoso':
+                        return 'celosa';
+                    case 'dedicado':
+                        return 'dedicada';
+                    case 'catalítico':
+                        return 'catalítica';
+                    case 'listo':
+                        return 'lista';
+                    default:
+                        return match;
+                }
+            });
 
-        // replace original content with translated text
-        document.documentElement.innerHTML = translatedText;
-        document.documentElement.lang = 'es'; //language is spanish, again
-        
-        // re adding the scrolling effect
-        smoothScroll();
+            // replace placeholders w original words
+            Object.entries(placeholders).forEach(([placeholder, word]) => {
+                const regex = new RegExp(placeholder, 'g');
+                translatedText = translatedText.replace(regex, word);
+            });
 
-        window.scrollTo(0, 0); // i want it to scroll to the top of the page once translated
-    })
-    .catch(error => console.error('Error:', error));
+            //replace original content w translated content
+            document.documentElement.innerHTML = translatedText;
+            document.documentElement.lang = 'es'; 
+
+            // re-add scrolling effect
+            smoothScroll();
+
+            window.scrollTo(0, 0); // scroll to top automatically
+        })
+        .catch(error => console.error('Error:', error));
 }
 
-
-//fading and typing transition
-//waiting for dom to load
+//typing effect
 document.addEventListener("DOMContentLoaded", function() {
- 
-    
-    //select elements needed
-    var typingText = document.getElementById("fading-in");
-    var moreAbout = document.getElementById("more-about").querySelector("a");
-    
-
-    //add the fading transition
-    setTimeout(function() {
-        typingText.classList.add("fade-in");
-    }, 1000); 
-    
-    //after fade in, trigger typing
-    setTimeout(function() {
-        typeWriter(moreAbout, "→ More About Me", 100);
-    }, 4000); 
+    var typingText = document.getElementById("typing-text");
+    var caret = typingText.nextElementSibling;
+    caret.style.width = window.getComputedStyle(typingText).getPropertyValue('width');
 });
 
-//typing transition
-function typeWriter(element, text, speed) {
-    var i = 0;
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
 
 //hamburger menu for when responsive
 function toggleMenu() {

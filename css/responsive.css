@@ -1,0 +1,517 @@
+/* RESPONSIVE STYLES */
+
+/* small screen styles */
+@media screen and (max-width: 768px) {
+
+    /* style for small screens (mobile) */
+  
+  /* avoids overflow scrolling */
+    body {
+      overflow-x: hidden;
+    }
+  
+    /* navigation */
+    nav{
+      background-color: #e8e0db;
+    }
+  
+      /* hides the logo - hamburger menu */
+      .logo {
+        display: none;
+      }
+    
+      /* hides nav line - hamburger menu */
+      .line {
+        display: none;
+      }
+    
+      /* line icon - hamburger menu */
+      .menu-icon {
+        display: block; 
+        cursor: pointer; 
+        padding-left: 20px;
+    }
+    
+    /* links div in nav */
+    .links {
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        position: absolute; 
+        top: 90px; 
+        left: 0; 
+        width: 100%; 
+        background-color: #e8e0db; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+    
+    /* when icon is clicked, display the links */
+    .active {
+        display: flex;
+    }
+    /* home section */
+    .home-intro p {
+      padding: 50px 20px; 
+      font-size: 20px; 
+  }
+  
+  .home-small-abt {
+      width: 25%;
+      font-size: 4vw; 
+      margin-left: 3%; 
+      text-align: center;
+  }
+  
+  .home-branding {
+      font-size: 3.5vw;
+      margin-left: -8%;
+  }
+  
+  .home-txt-more {
+      font-size: 2.5vw; 
+      margin-left: 11%;
+  }
+  
+  /* work section */
+  .work-parent {
+    width: 50%;
+    margin-right: 1000px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .work-txt-parent {
+    margin-top: 50px; 
+  }
+  
+  .work-txt-title {
+    font-size: 35px; 
+    text-align: center;
+    margin-bottom: 20px; 
+    width: 50%;
+    padding-left: 5%;
+  }
+  
+  .work-txt-descrip {
+    font-size: 16px; 
+    width: 50%; 
+    margin-left: 40px; 
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  .work-tags {
+    font-size: 16px; 
+    margin-bottom: 20px;
+  }
+  
+  .work-icons {
+    margin-bottom: 20px; 
+  }
+  
+  .work-img-parent {
+    width: 200px;
+    height: 200px; 
+    margin-right: 400px;
+  }
+  
+  .work-set {
+    width: 350px; 
+    height: 300px; 
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+  
+  .work-small-parent {
+    margin-top: 50px; 
+    flex-direction: column;
+  }
+  
+  .work-proj {
+    width: 370px; 
+    max-width: 370px;
+    height: 50%;
+    margin-bottom: 20px; 
+    padding: 20px; 
+    margin-right: 1030px;
+  }
+  
+  .work-small-title {
+    font-size: 25px; 
+    text-align: center; 
+    margin-top: 20px;
+    margin-bottom: 10px; 
+  }
+  
+  .work-small-txt-des {
+    font-size: 14px; 
+    width: 90%; 
+    margin: 0 auto; 
+    margin-bottom: 20px; 
+  }
+  
+  .work-proj .work-tags {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 50px;
+    align-items: center;
+  }
+  
+  .work-proj .work-icons {
+    margin: 0 auto;
+    padding-top: 20px;
+    align-items: center;
+  }
+  
+  /* about section */
+  .about-parent {
+    width: 50%;
+    flex-direction: column; 
+  }
+  
+  .about-intro {
+    font-size: 35px; 
+    text-align: center;
+    width: 50%;
+    margin-right: 900px;
+    margin-bottom: 30px; 
+  }
+  
+  .about-txt-par {
+    font-size: 16px; 
+    width: 30%; 
+    margin-left: 280px;
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  .abt-skills {
+    width: 40%; 
+    margin-left: 260px; 
+    flex-direction: column; 
+  }
+  
+  .abt-skills-btn {
+    width: 130px;
+    margin: 10px auto; 
+  }
+  
+  .about-img {
+    width: 70%; 
+    height: 400px; 
+    margin-top: 20px;
+    margin-left: -50px;
+  }
+  
+  /* contact section */
+  .zdc-contact{
+    width: 50%;
+  }
+  
+  .contact-intro {
+    margin-right: 300px;
+    font-size: 35px; 
+    text-align: center;
+    padding-bottom: 20px; 
+  }
+  
+  .break {
+    width: 50%;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-left: 40px;
+  }
+  
+  .contact-icon-parent {
+    margin-left: 150px;
+    width: 50%; 
+    align-items: center; 
+  }
+  
+  .contact-icon {
+    margin-right: 10px;
+  }
+  
+  form {
+    margin-top: 30px;
+    width: 50%; 
+    align-items: center;
+    margin-right: 320px ;
+  }
+  
+  label {
+    font-size: 18px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    font-size: 18px; 
+  }
+  
+  .form-btn {
+    width: 100%; 
+    margin-left: 0; 
+  }
+  
+  /* footer */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center; 
+    padding-left: 0; 
+  }
+  
+  .location, .copy, .language {
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+    text-align: center;
+  }
+  
+  .copy {
+    margin-right: 0; 
+  }
+  
+  .language {
+    padding-right: 0; 
+  }
+  
+  }
+  
+  /* medium screen styles */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* styles for medium screens (tablets) */
+    /* avoids overflow scrolling */
+    body {
+      overflow-x: hidden;
+    }
+  
+    /* navigation */
+    nav{
+      background-color: #e8e0db;
+    }
+  
+      /* hides the logo - hamburger menu */
+      .logo {
+        display: none;
+      }
+    
+      /* hides nav line - hamburger menu */
+      .line {
+        display: none;
+      }
+    
+      /* line icon - hamburger menu */
+      .menu-icon {
+        display: block; 
+        cursor: pointer; 
+        padding-left: 20px;
+    }
+    
+    /* links div in nav */
+    .links {
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        position: absolute; 
+        top: 90px; 
+        left: 0; 
+        width: 100%; 
+        background-color: #e8e0db; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+    
+    /* when icon is clicked, display the links */
+    .active {
+        display: flex;
+    }
+  
+    /* home section */
+    .home-intro p {
+      padding: 100px 50px;
+      font-size: 24px; 
+  }
+  
+  .home-small-abt {
+      width: 40%; 
+      font-size: 5vw;
+  }
+  
+  .home-branding {
+      font-size: 2vw;
+      text-align: center;
+      margin-left: 0;
+  }
+  
+  .home-txt-more {
+      font-size: 1.8vw; 
+      margin-left: 20%;
+  }
+  
+  /* work section */
+  .work-parent {
+    width: 50%;
+    margin-right: 1000px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .work-txt-parent {
+    margin-top: 100px; 
+  }
+  
+  .work-txt-title {
+    font-size: 40px; 
+    text-align: center; 
+    margin-bottom: 30px; 
+  }
+  
+  .work-txt-descrip {
+    font-size: 20px;
+    width: 70%;
+    margin: 0 auto; 
+    margin-bottom: 30px; 
+    text-align: center;
+  }
+  
+  .work-tags {
+    font-size: 18px; 
+    justify-content: center; 
+    margin: 0 auto; 
+    margin-bottom: 30px; 
+  }
+  
+  .work-icons {
+    width: 100%;
+    margin-left: 330px;
+    align-items: center;
+  }
+  
+  .work-img-parent {
+    width: 400px;
+    height: 400px; 
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  
+  .work-set {
+    width: 400px; 
+    height: 400px; 
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+  
+  .work-small-parent {
+    margin-top: 100px; 
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .work-proj {
+    width: 80%; 
+    max-width: 450px; 
+    margin-right: 700px;
+    margin-bottom: 30px; 
+    padding: 20px;
+  }
+  
+  .work-small-title {
+    font-size: 35px; 
+    text-align: center; 
+    margin-top: 30px; 
+    margin-bottom: 20px; 
+  }
+  
+  .work-small-txt-des {
+    font-size: 16px; 
+    width: 80%; 
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  
+  /* about section */
+  .about-parent {
+    width: 50%;
+    flex-direction: column; 
+  }
+  
+  .about-intro {
+    font-size: 40px; 
+    margin-left: 0; 
+    margin-bottom: 40px;
+    text-align: center; 
+    
+  }
+  
+  .about-txt-par {
+    width: 70%; 
+    margin: 0 auto; 
+    font-size: 18px; 
+  }
+  
+  .abt-skills {
+    width: 70%; 
+    margin-left: 160px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .abt-skills-btn {
+    margin: 10px auto; 
+  }
+  
+  .about-img {
+    width: 80%; 
+    height: 450px;
+    margin-bottom: 40px; 
+    margin-left: 60px;
+  }
+  
+  /* contact section */
+  .zdc-contact{
+    width: 50%;
+  }
+  .contact-intro {
+    font-size: 35px; 
+    padding-bottom: 25px; 
+  }
+  
+  .contact-icon-parent {
+    width: 400px; 
+    margin-left: 270px;
+    align-items: center; 
+  }
+  
+  .contact-icon {
+    margin: 20px 10px; 
+  }
+  
+  form {
+    margin-top: 30px;
+    width: 70%; 
+    align-items: center;
+  }
+  
+  label {
+    font-size: 20px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    font-size: 20px; 
+  }
+  
+  .form-btn {
+    width: 100%; 
+    margin-left: 0; 
+  }
+  
+  /* footer */
+  .footer-bottom {
+    padding-left: 0;
+  }
+  
+  .copy {
+    margin-right: 50px;
+  }
+  }

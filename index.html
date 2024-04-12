@@ -7,6 +7,9 @@
     <!-- link to css -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- link to responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+
      <!-- logo custom icon -->
      <link rel="icon" href="/images/zdc-logo-blkw.png" type="image/x-icon">
 
@@ -23,10 +26,12 @@
 </head>
 <body style="background-color: #e8e0db;">
     <!-- begin navigation -->
-        <!-- create nav bar -->
+
+    <div class="wrapper">
+          <!-- create nav bar -->
         <nav id="nav">
             <!-- logo - just zdc -->
-            <div class="logo"><a href="#home">zdc</a></div>
+            <div class="logo"><a href="https://www.linkedin.com/in/zaydee-dominguez-chang/" target="_blank">zdc</a></div>
 
             <!-- hamburger menu icon -->
              <div class="menu-icon" onclick="toggleMenu()">
@@ -46,48 +51,40 @@
           <!-- decor line -->
           <div class="line"></div>
 
-        <!-- ALL SECTIONS - TAKE 100% OF DESIGNATED SPACE -->
-
         <!-- home section -->
-        <section class="zdc-home" id="home">
+        <div class="zdc-home" id="home">
             <!-- begin sections within -->
-    
             <!-- parent div to display info side by side -->
             <div class="home-parent">
-    
-                <!-- parent holder for image -->
-                <div class="home-img-parent">
-                    <!-- image -->
-                    <div class="home-img"></div>
-                </div>
-    
                 <!-- box for all text -->
                 <div class="home-txt-parent">
     
                     <!-- intro text-->
                     <div class="home-intro">
-                        <p>Hi, I'm Zaydee. </p>
-                        <p>It's great to meet you. </p>
-                     </div>
-                    <!-- small desc -->
-                    <div class="home-typing" id="fading-in">
+                        <p id="typing-text">Hi, I'm Zaydee. It's great to meet you.</p>
+                         </div>
+
+                         <!-- will just hold text for fade transition -->
+                         <div class="fade-parent">
+                             <!-- small desc -->
+                    <div class="home-small-abt">
                         I am passionate about creating impactful digital experiences through code and design.
                     </div>
-    
                     <!-- "branding" -->
                     <div class="home-branding">
                         <p>Zealous. Dedicated. Catalytic.</p>
-    
                     </div>
-
                       <!-- more abt me -->
             <div class="home-txt-more" id="more-about">
-                <a href="#about" style="color: #000; text-decoration: none;"></a>
+                <a href="#about" style="color: #000; text-decoration: none;">  &#8594; More About Me</a>
             </div>
+        </div>
+                      
+                    
                 </div>
             </div>
           
-        </section>
+        </div>
 
         <!-- work section -->
         <div class="zdc-work" id="work">
@@ -291,7 +288,23 @@
             <div class="about-intro">Crafting My Narrative</div>
             <!-- abt me -->
             <div class="about-txt-par">My journey into web development began at age 11, igniting a lifelong passion. As a First-Generation Latina woman, I'm dedicated to mastering both front-end and back-end development while advocating for diversity and inclusion in tech. Beyond coding, I enjoy traveling, photography, concerts, and discovering new music.</div>
-        </div> 
+            
+            <!-- skills - will be buttons -->
+            <div class="abt-skills">
+                <button class="abt-skills-btn">HTML</button>
+                <button class="abt-skills-btn">CSS</button>
+                <button class="abt-skills-btn">JavaScript</button>
+                <button class="abt-skills-btn">SCSS</button>
+                <button class="abt-skills-btn">PHP</button>
+                <button class="abt-skills-btn">jQuery</button>
+                <button class="abt-skills-btn">Vue.js</button>
+                <button class="abt-skills-btn">React.js</button>
+                <button class="abt-skills-btn">Python</button>
+                <button class="abt-skills-btn">Firebase</button>
+                <button class="abt-skills-btn">Adobe Creative Cloud</button>
+                <button class="abt-skills-btn">Git Version Control</button>
+             </div>
+                </div>
          <!-- box for image -->
          <div class="about-img-parent">
             <!-- image here -->
@@ -301,11 +314,36 @@
         </div>
 
         <!-- contact section -->
-        <div class="zdc-contact" id="contact">
-            <div class="break" id="break">Let's connect and collaborate on something great &#8595;</div>
-
+        <div class="zdc-contact" id="contact" style="margin-top: 50px;">
             <p class="contact-intro">Get in touch</p>
-             <!-- form to send info -->
+            <div class="break" id="break">Let's connect and collaborate on something great. Whether it's a project idea, partnership opportunity, or just to say hello, I'm here and ready to make it happen!</div>
+            <!-- icons in contact form -->
+            <!-- parent - dis flex -->
+            <div class="contact-icon-parent">
+
+                <!-- linkedin logo -->
+                <div class="contact-icon">
+                    <a href="https://www.linkedin.com/in/zaydee-dominguez-chang/" target= "_blank" style="text-decoration: none;">
+                        <img src="/images/zdc-linkedin.png" alt="zdc-linkedin-logo" style="width: 50px; height: 50px;">
+                    </a>
+                </div>
+
+                <!-- calendly logo --> 
+
+                <div class="contact-icon">
+                    <a href="https://calendly.com/zadomin" target= "_blank" style="text-decoration: none;">
+                        <img src="/images/zdc-calendly.png" alt="zdc-calendly-logo" style="width: 50px; height: 50px;">
+                    </a>
+                </div>
+
+                <!-- email logo -->
+                <div class="contact-icon">
+                    <a href="mailto:zaydominguez8223@gmail.com" target= "_blank" style="text-decoration: none;">
+                        <img src="/images/zdc-email.png" alt="zdc-email-logo" style="width: 50px; height: 50px;">
+                    </a>
+                </div>
+            </div>
+            <!-- form to send info -->
              <form action="https://formspree.io/f/xayrorze" method="POST">
 
                 <label>First Name*:</label>
@@ -323,40 +361,13 @@
                       <button type="submit" class="form-btn">Send</button>
                     </form>
                 </div>
-        
-        
-            <!-- footer section -->
-             <section class="zdc-footer">
-                 <!-- blow up text -->
-        <div class="footer-blowup">let's connect.</div>
-        <p class="footer-smalltext">feel free to visit my relative links, and connect with me on linkedin. i can't wait to meet you.</p>
-        <br>
-        <div class="footer-link-parent">
-             <div class="footer-link"> <a href="https://www.linkedin.com/in/zaydee-dominguez-chang/" target="_blank">linkedin</a></div> 
-        <br>
-          <hr>
-        <div class="footer-link"> <a href="https://calendly.com/zadomin" target="_blank">calendly</a></div>
-        <br>
-        <hr>
-        <div class="footer-link"> <a href="https://luddy.iupui.edu/news/story/luddy-lantinx-student-influence-idew" target="_blank">idew story</a></div>
-        <br>
-        <hr>
-        <div class="footer-link"> <a href="#break">contact me</a></div>
-        <br>
-        <hr>
-        </div>
-       
-        <br>
-        <div class="footer-lang-top">
-            <p class="language" id="translate" onclick="translatePage()" style="cursor: pointer;">¿hablas español?</p>
-            <p class="top"> <a href="#nav">&#8593; back to top</a></p>
-        </div>
-       <div class="footer-bottom">
-        <p class="location">[currently] in indianapolis, in</p>
-        <p class="copy">copyright 2024</p>
-        <p class="right">all rights reserved</p>
-       </div>
-       
-    </section>
+    </div>
+    
+    <!-- footer section -->
+    <div class="footer-bottom">
+    <p class="location">[currently] in indianapolis, indiana</p>
+    <p class="copy">copyright 2024</p>
+    <p class="language" id="translate" onclick="translatePage()" style="cursor: pointer;">¿hablas español?</p>
+    </div>
 </body>
 </html>
