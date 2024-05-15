@@ -23,6 +23,7 @@ function smoothScroll() {
 //invoke func when DOM is loaded
 document.addEventListener("DOMContentLoaded", smoothScroll);
 
+//translating page
 function translatePage() {
     const targetLanguage = 'es'; // language is spanish
 
@@ -57,14 +58,8 @@ function translatePage() {
             //adjusting gender words to match fem
             let translatedText = data.data.translations[0].translatedText;
             // replace masc pronouns w fem pronouns
-            translatedText = translatedText.replace(/\b(celoso|dedicado|catalítico|listo)\b/gi, match => {
+            translatedText = translatedText.replace(/\b(listo)\b/gi, match => {
                 switch (match.toLowerCase()) {
-                    case 'celoso':
-                        return 'celosa';
-                    case 'dedicado':
-                        return 'dedicada';
-                    case 'catalítico':
-                        return 'catalítica';
                     case 'listo':
                         return 'lista';
                     default:
@@ -89,6 +84,7 @@ function translatePage() {
         })
         .catch(error => console.error('Error:', error));
 }
+
 
 //typing effect
 document.addEventListener("DOMContentLoaded", function() {
