@@ -1,0 +1,36 @@
+nav {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    height: 90px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+
+        a {
+            font-family: com-garam-reg;
+            text-decoration: none;
+            color: #000;
+            
+            .logo {
+                padding-left: 50px;
+                font-size: 25px;
+           
+            }
+        }
+
+        .links {
+            font-size: 20px;
+            padding-right: 50px;
+
+            a {
+                margin-right: 40px;
+                cursor: pointer;
+            }
+        }
+
+        .logo:hover{
+            color: #a74d4a;
+        }
+
+    
+}

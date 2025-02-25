@@ -1,0 +1,41 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html, body {
+ height: 100%;
+ background-color: #eae6e2;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+ margin-bottom: 16px
+}
+
+
+//fonts
+@font-face {
+    font-family: com-garam-reg;
+    src: url(../css/fonts/cormorant_garamond/CormorantGaramond-Regular.ttf);
+}
+
+@font-face {
+    font-family: com-garam-med;
+    src: url(../css/fonts/cormorant_garamond/CormorantGaramond-Medium.ttf);
+}
+
+@font-face {
+    font-family: com-garam-ital;
+    src: url(../css/fonts/cormorant_garamond/CormorantGaramond-Italic.ttf);
+}
+
+@font-face {
+    font-family: com-garam-bold;
+    src: url(../css/fonts/cormorant_garamond/CormorantGaramond-Bold.ttf);
+}
+
+@media (max-width: 576px) {
+    html, body {
+       overflow-x: hidden;
+    }
+}

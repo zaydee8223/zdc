@@ -1,0 +1,209 @@
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    gap: 40px;
+    
+    .home-img-parent{
+    width: 650px;
+    height: 850px;
+    max-width: 650px;
+    max-height: 850px;
+     
+        .home-img {
+            width: 100%;
+            height: 100%;
+            background-image: url(../../images/zdc-home-img.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .home-text-parent{
+        max-width: 900px;
+        height: 850px;
+        margin-left: 110px;
+
+        .home-upper-text{
+            display: flex;
+            align-items: center;
+            
+            .upper-text {
+                font-family: com-garam-med;
+                font-size: 30px;
+                color: #000;
+            }
+
+            .upper-line {
+                background-color: #000;
+                flex-grow: 1;
+                height: 1px;
+                margin-left: 50px;
+                max-width: 650px;
+            }
+        }
+
+        .bottom-text {
+            width: 800px;
+            color: #000;
+            font-size: clamp(24px, 5vw, 60px);
+            font-family: com-garam-med;
+            line-height: 2;
+            text-align: left;
+            margin-top: 40px;
+
+            #home-per-title, #home-emph {
+                font-family: com-garam-ital;
+            }
+
+            #home-per-based, .code-des {
+                font-family: com-garam-bold;
+            }
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+        }
+    }
+}
+
+//media queries
+@media (max-width: 576px) {
+    .home-content {
+        padding-left: 150px;
+        flex-direction: column;
+
+        .home-img-parent {
+            width: 340px;
+            height: 300px;
+            
+            .home-img {
+                width: 260px;
+                height: 200px;
+                margin-right: 10px;
+            }
+        }
+        .home-text-parent {
+            width: 400px;
+            margin-top: -100px;
+            margin-left: 0;
+            
+            .home-upper-text{
+                width: 200px;
+                flex-direction: column;
+    
+                .upper-text{
+                 font-size: 18px;
+                }
+            }
+
+            .bottom-text {
+                width: 350px;
+                padding: 30px;
+                margin-top: -10px;
+                font-size: 18px;
+            }
+
+            img {
+                width: 50px;
+                height: 50px;
+                margin-top: -10px;
+            }
+        }
+       
+    }
+  }
+  
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+
+        .home-img-parent {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto 50px 200px;
+            
+            .home-img {
+                width: 100%;
+                height: 500px;
+            }
+
+        }
+
+        .home-text-parent {
+            width: 100%;
+            margin-left: 400px;
+            
+            .home-upper-text{
+            
+                .upper-text{
+                font-size: 30px;
+                }
+
+                .upper-line {
+                    width: 100%;
+                }
+            }
+
+            .bottom-text{
+                width: 100%;
+            }
+        }
+       
+    }
+  }
+  
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .home-content {
+        flex-direction: column;
+
+        .home-img-parent {
+            width: 100%;
+            height: 100%;
+           
+            
+            .home-img {
+                width: 100%;
+                height: 400px;
+            }
+
+        }
+
+        .home-text-parent {
+            width: 100%;
+            margin-right: 100px;
+            
+            .home-upper-text{
+                
+                .upper-text{
+                font-size: 30px;
+                }
+
+                .upper-line {
+                    width: 100%;
+                }
+            }
+
+            .bottom-text{
+                width: 100%;
+            }
+        }
+       
+    }
+  }
+  
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    
+  }
+  
+ 
+  @media (min-width: 1201px) {
+    
+  }
+  
