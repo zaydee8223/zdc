@@ -132,7 +132,8 @@ export function getPageContent(pageID) {
       </div>
       <p class="contact-main-header">Let's connect and create something great. </p>
       <div class="contact-form">
-        <form name="contact" netlify>
+        <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact"> 
             <label for="fname">First Name:</label>
             <input type="text" id="fname">
 
